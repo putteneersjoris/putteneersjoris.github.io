@@ -13,7 +13,7 @@ GitHub | Tumblr | Youtube | Behance
 
 <meta charset="utf-8" lang="en">
 
-**Juraj Tomori**
+**Joris Putteneers**
 
 Welcome to my blog,
 
