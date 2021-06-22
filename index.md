@@ -1,6 +1,6 @@
 // Personal Profile:
-<body style="background-color:#FF0000;">
-</body>
+<body style="background-color:#000000;">
+
 
 ## Joris Putteneers
 
@@ -360,3 +360,4 @@ or we'll use emoji's as colored markers
 
 ___
 
+</body>
