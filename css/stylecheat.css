@@ -1,4 +1,5 @@
 /* declares all headers1 to be red */
+/* the main body of the site*/
 body{
     background: #f4f4f4;
     color: #000000;
@@ -7,15 +8,36 @@ body{
     font-size: 12px;
     font-weight: normal;
     line-height: 0.5em;
+    margin: 25px;
 }
+
+/* the headers of the site */
+/*-----------------------------------------------------------*/
 h1{
     color:black;
 }
 h4{
-    color:green;
+    color:black;
     font-size: 12px
 }
-/* declares all links to be black */
+/* the links of the site */
+/*-----------------------------------------------------------*/
 a{
-    color: aquamarine;
+    color: rgb(167, 89, 0);
+}
+
+/* the classes of the site */
+/*-----------------------------------------------------------*/
+
+/* classs in main*/
+.content{
+    color:white;
+    font-size:24px;
+    
+
+}
+
+.container{
+    
+    margin:auto;
 }
