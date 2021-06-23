@@ -23,7 +23,7 @@
 /* the links of the site */
 /*-----------------------------------------------------------*/
 a{
-    color: rgb(15, 107, 64);
+    color: rgb(55, 52, 255);
 }
 
 /* the classes of the site */
@@ -41,3 +41,6 @@ a{
         width: 100%;
         margin:auto;
     }
+        
+    a img { display:none; }
+    a:hover img { display: block; }
