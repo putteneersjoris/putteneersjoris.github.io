@@ -1,2 +1,8 @@
+
+body{
+    
+    line-height: 25px;
+        margin: 25px;
+}
 a img { display:none; }
-a:hover img { display:block; }
+a:hover img { display: block; }
