@@ -1,0 +1,9 @@
+/* declares all headers1 to be red */
+
+h1{
+    color:red
+}
+/* declares all links to be black */
+a{
+    color: black
+}
