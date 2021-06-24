@@ -60,6 +60,10 @@ a{
         
     }
 
+    .red_links{
+        color: red;
+    }
+
     .student_work_images{
 
         position: absolute;
