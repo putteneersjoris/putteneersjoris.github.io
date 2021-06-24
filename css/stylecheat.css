@@ -41,6 +41,26 @@ a{
         width: 100%;
         margin:auto;
     }
+
+    .content{
+        color:white;
+        font-size:24px;
         
+
+    }
+
+    .student_work_text{
+
+        color:#000;
+        font-size:16px;
+        width: 100%;
+        margin:auto;
+        font-weight: normal;
+        line-height: 1em;
+        
+    }
+
+/* display images when you hover over work */
+/*-----------------------------------------------------------*/        
     a img { display:none; }
     a:hover img { display: block; }
