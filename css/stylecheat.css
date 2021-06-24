@@ -60,6 +60,14 @@ a{
         
     }
 
+    .student_work_images{
+
+        position: absolute;
+        width: 100%;
+        margin:auto;
+        
+    }
+
 /* display images when you hover over work */
 /*-----------------------------------------------------------*/        
     a img { display:none; }
