@@ -73,4 +73,11 @@ a{
 /* display images when you hover over work */
 /*-----------------------------------------------------------*/        
     a img { display:none; }
-    a:hover img { display: block; }
+    a:hover img { 
+        width : 150px;
+        display: inline-block; 
+        position: absolute;
+        z-index: -1;
+        border: 1px solid rgb(55, 52, 255);
+  
+    }
