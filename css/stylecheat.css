@@ -33,20 +33,11 @@ a{
     .content{
         color:white;
         font-size:24px;
-        
-
     }
 
     .container{
         width: 100%;
         margin:auto;
-    }
-
-    .content{
-        color:white;
-        font-size:24px;
-        
-
     }
 
     .student_work_text{
@@ -59,9 +50,10 @@ a{
         line-height: 1em;
         
     }
-
+    /* classes of student projects */
     .red_links{
         color: red;
+        font-weight: bold;
     }
 
     .student_work_images{
@@ -72,6 +64,7 @@ a{
         
     }
 
+    
 /* display images when you hover over work */
 /*-----------------------------------------------------------*/        
     a img { display:none; }
