@@ -1,18 +1,9 @@
-#img {
-    position: absolute;
-    width: 465px;
-    height: 50px;
-    border: 1px solid red;
-  }
-  #img:before {
-    position: absolute;
-    content: '';
-    width: -25%;
-    height: 100%;
-    top: 50px;
-    left: 80%;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    box-sizing: border-box;
-    display: inline-block;
-  }
+table, th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 1px;
+}

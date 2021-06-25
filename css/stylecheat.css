@@ -69,7 +69,15 @@ a{
         
     }
 
-    
+    .table_layout{
+
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 1em;
+        width : 60%;
+        
+    }
 /* display images when you hover over work */
 /*-----------------------------------------------------------*/        
     a img { display:none; }
