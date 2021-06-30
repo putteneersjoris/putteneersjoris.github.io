@@ -79,6 +79,13 @@ a{
         
     }
 
+
+    .code_python{
+
+        position: relative;
+        width: 35%;
+
+    }
     .table_layout{
 
         color: rgb(0, 0, 0);
