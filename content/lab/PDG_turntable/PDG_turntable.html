@@ -30,8 +30,8 @@
 
 
 
-            </div>
-            <pre class="brush: python">
+            
+            
                 def count_even_numbers(begin, end):
                     counter = 0
                     for i in range (begin, end):
@@ -43,12 +43,25 @@
                 main()
 
 
-             </pre>
-            <code>
+             
+                ```python
+                def count_even_numbers(begin, end):
+                    counter = 0
+                    for i in range (begin, end):
+                        if i%2 ==0:
+                            counter +=1    
+                    print("there are: ",counter, "even numbers between :",begin, " and ",end,)
+                def main()
+                    count_even_numbers(0,50)
+                main()
+
+                ```
+            
+             <style class="fallback">body{;white-space:pre;font-family:monospace}</style><script src="../markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
               
 
 
-            </code>
+            
             
             
             <p>back to <a href = "../../../index.html">main</a></p>
