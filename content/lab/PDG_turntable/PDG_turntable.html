@@ -21,7 +21,7 @@
             
             
             
-            <br> <h3>1)</h3>
+            <h3>1.</h3>
             
             <br>Let's lay down a wedge sop that generates 6 workitems, containing an `@index` attribute with an integer value ranging from 0-5.
             this attribute value will be used as an input for the platonic solids type. tip: In some nodes, we can use integers to drive ordered menu's.
@@ -52,12 +52,10 @@
             <p><img width = 680  src="../PDG_turntable/4.gif">
             
             <img width = 680  src="../PDG_turntable/6.gif"></p>
+            <br>
             
-            
-            <br> <h3>2)</h3>
+            <h3>2.</h3>
 
-            
-            
             <br>in part 2, we'll see how we can use Python and PDG to make a fully automated turntable . first we'll start by using a file pattern to determine the input folder. With the "*" symbol, we can define all* filenames and extensions. We than use a wedge Top to generate a `@geometry_index` attribute that has the same value as the `@pdg_index`. I just do this for clarification and name conventtions. I follow this wedge node up by another wedge Top. This time setting a rotation attribute from 0 to 360. we will use this later in our Python processor so we are not time dependant.
 
             <br>we now lay down a python porocessor with the following script:
