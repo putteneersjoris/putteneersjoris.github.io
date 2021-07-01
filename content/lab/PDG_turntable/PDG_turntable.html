@@ -61,7 +61,7 @@
             <br>in part 2, we'll see how we can use Python and PDG to make a fully automated turntable . first we'll start by using a file pattern to determine the input folder. With the "*" symbol, we can define all* filenames and extensions. We than use a wedge Top to generate a `@geometry_index` attribute that has the same value as the `@pdg_index`. I just do this for clarification and name conventtions. I follow this wedge node up by another wedge Top. This time setting a rotation attribute from 0 to 360. we will use this later in our Python processor so we are not time dependant.
 
             <br>we now lay down a python porocessor with the following script:
-            <p><div class = "code_python" ><script src="https://gist.github.com/putteneersjoris/95be61f4d8a3ee42d256ca78858015e9.js"></script>></script></div> </p>
+            <p><div class = "code_python" ><script src="https://gist.github.com/putteneersjoris/95be61f4d8a3ee42d256ca78858015e9.js"></script></script></div> </p>
             <br>this script generates a small node tree at Sop level that will be responsible for the rotation per `@wedgenum`. All parameters are defined in the script. We can now conclude this setup with a rop fetch and an output
 
             <p>this is the <a href = "../PDG_turntable/PDG_turntable.hiplc">link</a> to the PDG turntable houdini file </p>
