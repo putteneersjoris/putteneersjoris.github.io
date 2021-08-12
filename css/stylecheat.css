@@ -19,7 +19,7 @@
     }
     h4{
         color:black;
-        font-size: 12px/* the links of the site */
+        font-size: 16px/* the links of the site */
 /*-----------------------------------------------------------*/
     }
 
@@ -91,7 +91,7 @@ a{
     .table_layout{
 
         color: rgb(0, 0, 0);
-        font-size: 18px;
+        font-size: 16px;
         font-weight: normal;
         line-height: 1em;
         width : 75%;
