@@ -4,7 +4,7 @@
     position: absolute;
 }
 
-.text{
+.text, th{
     margin: 0px;
     padding: 0px;
     cursor: all-scroll;
@@ -14,14 +14,14 @@
     font-size: 15px;
     transform:translate(-30px, -20px);
     border: 1px solid black;
-    opacity: 0; 
-    background-color: red; 
+    opacity: 0.4; 
+    background-color: white; 
     transition: 16s ease;
     z-index: 1;
     border-collapse: collapse; 
 }
 
-.text:hover, .td:hover, th:hover{
+.text:hover, .td:hover{
     opacity: 1;
     border: 1px solid  black;
     transition: 0.1s ease;
