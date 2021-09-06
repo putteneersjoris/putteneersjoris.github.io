@@ -1,0 +1,29 @@
+/* scrolldontzoom hover image */
+/*-----------------------------------------------------------*/  
+.base{
+    position: absolute;
+}
+
+.text{
+    margin: 0px;
+    padding: 0px;
+    cursor: all-scroll;
+    position: absolute;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    transform:translate(-30px, -20px);
+    border: 1px solid black;
+    opacity: 0; 
+    background-color: red; 
+    transition: 16s ease;
+    z-index: 1;
+    border-collapse: collapse; 
+}
+
+.text:hover, .td:hover, th:hover{
+    opacity: 1;
+    border: 1px solid  black;
+    transition: 0.1s ease;
+    border-collapse: collapse;  
+}

@@ -106,9 +106,5 @@ a{
   
     }
 
-/* no margin on scrolldontzoom image */
-/*-----------------------------------------------------------*/  
-.scrolldontzoom-margin{
-    margin: 0px;
-    padding: 0px;
-}
+
+
