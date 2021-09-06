@@ -9,8 +9,6 @@
         line-height: 1em;
         margin: 25px;
     }
-/* set tab size */
-/*-----------------------------------------------------------*/  
     
 /* the headers of the site */
 /*-----------------------------------------------------------*/
@@ -81,7 +79,6 @@ a{
         
     }
 
-
     .code_python{
 
         position: relative;
@@ -108,3 +105,10 @@ a{
         border: 1px solid rgb(55, 52, 255);
   
     }
+
+/* no margin on scrolldontzoom image */
+/*-----------------------------------------------------------*/  
+.scrolldontzoom-margin{
+    margin: 0px;
+    padding: 0px;
+}
