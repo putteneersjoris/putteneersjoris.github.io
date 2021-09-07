@@ -13,7 +13,7 @@
     font-size: 15px;
     transform:translate(-30px, -20px);
     border: 1px solid black;
-    opacity: 0.35; 
+    opacity: 0.3; 
     background-color: white;
     transition: 15s ease;
     z-index: 1;
@@ -21,11 +21,14 @@
     color: black;
     
     
+    
 }
 
 .text:hover{
     opacity: 1;
     transition: 0.1s ease;
-    color: red;
+    color: green
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
      
 }
