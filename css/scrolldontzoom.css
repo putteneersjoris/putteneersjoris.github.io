@@ -7,23 +7,25 @@
 .text, th{
     margin: 0px;
     padding: 0px;
-    cursor: all-scroll;
     position: absolute;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     transform:translate(-30px, -20px);
     border: 1px solid black;
-    opacity: 0.4; 
-    background-color: white; 
-    transition: 16s ease;
+    opacity: 0.35; 
+    background-color: white;
+    transition: 15s ease;
     z-index: 1;
     border-collapse: collapse; 
+    color: black;
+    
+    
 }
 
-.text:hover, .td:hover{
+.text:hover{
     opacity: 1;
-    border: 1px solid  black;
     transition: 0.1s ease;
-    border-collapse: collapse;  
+    color: red;
+     
 }
