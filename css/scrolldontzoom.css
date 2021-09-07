@@ -13,7 +13,7 @@
     font-size: 15px;
     transform:translate(-30px, -20px);
     border: 1px solid black;
-    opacity: 0.15; 
+    opacity: 0.25; 
     background-color: white;
     transition: 15s ease;
     z-index: 1;
@@ -27,6 +27,6 @@
 .text:hover{
     opacity: 1;
     transition: 0.1s ease;
-    color: red;
+    filter: invert(100%);
      
 }
