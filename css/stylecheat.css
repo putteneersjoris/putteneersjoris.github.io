@@ -250,10 +250,5 @@ a{
     line-height:1.2;
     font-family:'Consolas','BitstreamVeraSansMono','CourierNew',Courier,monospace;
     font-size:8px;
-    
-    
-    transform: skewY(15deg);
-            
-    
-    
+    transform: skewY(15deg);     
 }
