@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.img_container {
+  position: relative;
+  width: 50%;
+}
+
+.image_base {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay_image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  
+}
+
+.img_container:hover .overlay_image {
+  opacity: 1;
+  left: 60%;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="img_container">
+        <img class="image_base" src="pic.png" >
+        <img class = "overlay_image" src="layer.png">
+    </div>
+</body>
+</html>
