@@ -4,32 +4,53 @@
 <style>
  table,t,  td {
   
-  border: 1px solid black;
+  border: 1px solid rgb(194, 193, 255);
   border-collapse: collapse;
   
 }
 
 </style>
 
-<script src="java/p5.js"></script>
-<script src="java/p5.dom.js"></script>   
-<script src="java/sketch.js"></script>
-</head>
-<body>
-    <!-- navbar -->
-	
+<!--background renderer--> 
+<div id="backgroundScript">
+    <script src="js/three.js"></script>
+    <script src="js/Projector.js"></script>
+    <script src="js/CanvasRenderer.js"></script>
+    <script src="js/AsciiEffect_color.js"></script>
+    <script src="js/background_static.js"></script>
+</div>    
 
-	
-  	
-		
-    <link rel = "stylesheet" type = "text/css" href = "../css/stylecheat.css" >
+<link rel = "stylesheet" type = "text/css" href = "Style.css" >
+
+    
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+    <div id="cv_table">
+    	
+    
     <div class = "container">
     <div class = "table_layout">
-    <table>
+    <table >
         <tr>
             <td></td>
             <td >
-                <h1>Curriculum vitae: <u><a>Joris Putteneers</a></u></h1>
+                 
+                <div style="font-family: Arial;
+                white-space: pre; margin:0px; padding:0px; transform-origin: top left; transform:scale(1); font-size: 10px; position: relative; height:150px; text-align:center ; top:0px; left:0px; color: rgb(0, 0, 0); font-weight: bolder;">
+             ,. - .,             ,.-.                  
+        ,·'´ ,. - ,   ';\        /   ';\ '                
+    ,·´  .'´\:::::;'   ;:'\ '    ';    ;:'\      ,·'´';    
+   /  ,'´::::'\;:-/   ,' ::;  '   ';   ;::;     ,'  ,''\   
+ ,'   ;':::::;'´ ';   /\::;' '     ';   ';::;   ,'  ,':::'\' 
+ ;   ;:::::;   '\*'´\::\'  °      ';   ;:;  ,'  ,':::::;' 
+ ';   ';::::';    '\::'\/.'          ;   ;:;'´ ,'::::::;'  '
+  \    '·:;:'_ ,. -·'´.·´\‘        ';   '´ ,·':::::;'     
+   '\:` ·  .,.  -·:´::::::\'        ,'   ,.'\::;·´       
+     \:::::::\:::::::;:·'´'         \`*´\:::\;     ‘    
+       `· :;::\;::-·´               '\:::\;'            
+                                      `*´‘             
+                </div>    
+                
                 
             </td> 
         </tr>
@@ -112,112 +133,170 @@
 
         <tr>
             <td>2021</td>
-            <td><p> <u>Bpro RC1, RC19 &amp; RC20 (Bartlett School of Architecture. UK)</u></p>
+            <td>
+                <button type="button" class="collapsible">Bpro RC1, RC19 &amp; RC20 (Bartlett School of Architecture. UK)</button>
+            
+            <div class="content">
                 // Teaching the Bpro architectural design cluster RC1 (Cli-Migration), and urban design clusters:
-                RC19 &amp; RC20 (Autonomous Ecologies) at The Bartlett School of Architecture (UK) together
-                with Deborah Lopez and Hadin Charbel (RC1, RC20) &amp; Corneel Cannaerts and Michiel Heilbig
-                (RC19).
+                  RC19 &amp; RC20 (Autonomous Ecologies) at The Bartlett School of Architecture (UK) together
+                  with Deborah Lopez and Hadin Charbel (RC1, RC20) &amp; Corneel Cannaerts and Michiel Heilbig
+                  (RC19).
+              </div>
+
             </td> 
         </tr>
 
-
         <tr>
             <td>2021</td>
-            <td><p><u>Misfits Workshop (The University of Tennessee - Knoxville. US)</u></p>
+            <td>
+                <button type="button" class="collapsible">Misfits Workshop (The University of Tennessee - Knoxville. US)</button>
+            
+            <div class="content">
+                // A technical workshop exploring Houdini, Python and Vex to produce architectural prototypes.
+              </div>
 
-            // A technical workshop exploring Houdini, Python and Vex to produce architectural prototypes.</td> 
+            </td> 
         </tr>
 
 
         <tr>
             <td>2020</td>
-            <td><p><u>317 Artificial intelligence (Texas A&amp;M. US)</u></p>
-
+            <td>
+                <button type="button" class="collapsible">317 Artificial intelligence (Texas A&amp;M. US)</button>
+            
+            <div class="content">
                 // A practical course on implementing artificial intelligence in an architectural context. The
                 Course was given together with Gabriel Esquivel, Mehdi Farahbakhsh and Shane Bugni.
+              </div>
+
             </td> 
         </tr>
 
         <tr>
             <td>2019</td>
-            <td><p><u>Workshop Bartlett UCL (Bartlett School of Architecture. UK)</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Workshop Bartlett UCL (Bartlett School of Architecture. UK)</button>
+            
+            <div class="content">
                 // Workshop tackling how we can create architectural systems relating to contemporary
                 urgencies and domains, connected to a post-singularity and post-anthropogenic ecology.
                 <a href = "https://www.behance.net/gallery/86757571/Autonomous-Agencies" target = "_blank">projects</a>
-                </td> 
+              </div>
+
+            </td> 
         </tr>
 
         <tr>
             <td>2019</td>
-            <td><p><u>Workshop Autonomous Agencies, DesignMorphine (TU Wien. AU)</u></p>
+            <td>
+                <button type="button" class="collapsible">Workshop Autonomous Agencies, DesignMorphine (TU Wien. AU)</button>
+            
+            <div class="content">
                 // Workshop focused on creating a speculative narrative without human agency. Co-taught with
                 Vamsi Krishna Vemuri.
                 <a href = "https://fb.watch/4QjNQGsP9h/" target = "_blank">promo video</a> , 
                  <a href = "https://www.facebook.com/PutteneersJoris/posts/final-jury-designmorphine-workshopparticipating-studentsjulian-edelmann-konstant/2553997141289268/" target = "_blank"> jury pictures </a>
+              </div>
+
             </td> 
         </tr>
-
+        
         <tr>
             <td>2019</td>
-            <td><p><u>T4T lab 2019 (Texas A&amp;M. US)</u></p>
-
+            <td>
+                <button type="button" class="collapsible">T4T lab 2019 (Texas A&amp;M. US)</button>
+            
+            <div class="content">
                 // The project’s objective was to direct the students towards the values of focused
                 experimentation by manipulating tools and pipelines to their advantage, deriving an
                 architectural prototype without limitation and classification. The studio was co-taught with
                 Gabriel Esquivel.
                 <a href = "https://www.t4tlab.com/copy-of-t4t-lab-2018" target = "_blank">course description</a> , 
                 <a href = "https://putteneersjoris.github.io/content/student%20work.html" target = "_blank">projects</a>
+              </div>
+
             </td> 
         </tr>
 
         <tr>
             <td>2016</td>
-            <td><p><u>Blender workshop in Antwerp (BEL)</u></p>
+            <td>
+                <button type="button" class="collapsible">Blender workshop in Antwerp (BEL)</button>
+            
+            <div class="content">
+                // Blender crash course, making exterior and interior architectural scenes.
+              </div>
 
-                // Blender crash course, making exterior and interior architectural scenes.</td> 
+            </td> 
         </tr>
+
+    
 
         <tr>
             <td></td>
             <td><h2>// Articles / Publications / Interviews</h2></td> 
         </tr>
 
+
         <tr>
             <td>2018</td>
-            <td><p><u>Interview D2 Inspiration Series.</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Interview D2 Inspiration Series.</button>
+            
+            <div class="content">
                 // Interview with Fabio Palvelli, organizer of the D2 conference in Vienna.
                 The interview was part of a bigger series, covering interviews with Mike Winkelmann (Beeple),
                 Chris Do (TheFutur), Allan McKay (VFX supervisor), Edon Guraziu (concept artist) and Joris
                 Putteneers (Architect)
-                <a href = "https://www.youtube.com/watch?v=ogsCtNrtPIM&amp;ab_channel=D2Conferences" target = "_blank">D2 video</a></td> 
+                <a href = "https://www.youtube.com/watch?v=ogsCtNrtPIM&amp;ab_channel=D2Conferences" target = "_blank">D2 video</a>
+              </div>
+
+            </td> 
         </tr>
+
 
         <tr>
             <td>2018</td>
-            <td><p><u>Interview VTM.</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Interview VTM.</button>
+            
+            <div class="content">
                 // An interview on the national news where me and my colleagues explained the functionality of
                 a data driven air filtration system in an urban environment.
-                <a href = "https://www.youtube.com/watch?v=8xkxCP3EWRY&amp;feature=youtu.be" target = "_blank">VTM video</a></td> 
+                <a href = "https://www.youtube.com/watch?v=8xkxCP3EWRY&amp;feature=youtu.be" target = "_blank">VTM video</a>
+              </div>
+
+            </td> 
         </tr>
+
         <tr>
             <td>2017</td>
-            <td><p><u>Interview CGarchitect.</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Interview CGarchitect.</button>
+            
+            <div class="content">
                 //Jeff Mottle, owner of CGarchitect, contacted me to collaborate on an Interview. I was also
                 pointed out as a jury member of the CGarchitect awards 2018.
-                <a href = "http://www.cgarchitect.com/2017/07/interview-joris-putteneers" target = "_blank">interview</a></td> 
+                <a href = "http://www.cgarchitect.com/2017/07/interview-joris-putteneers" target = "_blank">interview</a>
+              </div>
+
+            </td> 
         </tr>
 
         <tr>
             <td>2017</td>
-            <td><p><u>Interview Unbuilt.</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Interview Unbuilt.</button>
+            
+            <div class="content">
                 // Interview on how I approach my procedural architectural work.
-                <a href = "https://medium.com/@Modelo/unbuilt-synesthesia-by-joris-putteneers-3dcd2d596b04" target = "_blank">interview</a></td> 
+                <a href = "https://medium.com/@Modelo/unbuilt-synesthesia-by-joris-putteneers-3dcd2d596b04" target = "_blank">interview</a>
+              </div>
+
+            </td> 
         </tr>
+
+        
 
         <tr>
             <td></td>
@@ -226,62 +305,88 @@
 
         <tr>
             <td>2021</td>
-            <td><p><u>Venice Biennale</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Venice Biennale</button>
+            
+            <div class="content">
                 // Exhibitioning a portion of my work at cityX venice Biennale.
 
                 <a href = "https://cityxvenice.org/16?fbclid=IwAR2GD9_up5t6IsD4LYCx2HsfOa6WyMTm7-afo3Aph3WuY5mjeivwb8VyJGo" target = "_blank">hyperlink</a>, 
                 <a href = "https://cityxvenice.org/ivp" target = "_blank">participants</a>,
                 <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/venice%20biennale/venice_biennale_a.png?raw=true" target = "_blank">picture</a>
-            </td>
+              </div>
+
+            </td> 
         </tr>
 
         <tr>
             <td>2020</td>
-            <td><p><u>Lecture at The University of Texas at Austin School of Architecture.</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Lecture @Austin School of Architecture.</button>
+            <div class="content">
                 // Presenting my work on speculative architecture.
-                <a href = "https://www.facebook.com/photo?fbid=10158458636801145&set=a.10152407560681145" target = "_blank">picture</a></td> 
+                <a href = "https://www.facebook.com/photo?fbid=10158458636801145&set=a.10152407560681145" target = "_blank">picture</a>
+              </div>
+
+            </td> 
         </tr>
 
         <tr>
             <td>2020</td>
-            <td><p><u>Speaker D2 Conference Vienna</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Speaker D2 Conference Vienna</button>
+            <div class="content">
                 // presentation on the benefits of virtual reality based tools in a workflow for storyboarding and
                 art direction.
-                <a href = "https://www.youtube.com/watch?v=0SyuOgaNGdw&amp;t=15s&amp;ab_channel=D2Conferences" target = "_blank">presentation</a></td> 
+                <a href = "https://www.youtube.com/watch?v=0SyuOgaNGdw&amp;t=15s&amp;ab_channel=D2Conferences" target = "_blank">presentation</a>
+              </div>
+
+            </td> 
         </tr>
 
         <tr>
             <td>2019</td>
-            <td><p><u>Texas A&M Lecture Business strategy (US)</u>.</p>
-
+            <td>
+                <button type="button" class="collapsible">Texas A&M Lecture Business strategy (US)</button>
+            <div class="content">
                 // I was invited to share my experiences on how I tackled some of the challenges of starting a
-                business.</td> 
+                business.
+              </div>
+
+            </td> 
         </tr>
 
         <tr>
             <td>2018</td>
-            <td><p><u>Supernova Conference Antwerp (BEL).</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Supernova Conference Antwerp (BEL).</button>
+            <div class="content">
                 // I was invited to show my short film E|A|S in Antwerp. It was presented By Dr.Angelo
                 Vermeulen who is a researcher at TU Delft. Supernova is a conference that promotes the use
-                of new technology by creative thinkers and designers.</td> 
+                of new technology by creative thinkers and designers
+              </div>
+
+            </td> 
         </tr>
 
         <tr>
             <td>2018</td>
-            <td><p><u>Exhibition London Design Festival (UK).</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Exhibition London Design Festival (UK).</button>
+            <div class="content">
                 //A ten-day festival that celebrated the convolution of biology, technology and design in which
-                me and my collaborators had the opportunity to exhibit.</td> 
+                me and my collaborators had the opportunity to exhibit.
+              </div>
+
+            </td> 
         </tr>
 
+        
         <tr>
             <td>2018</td>
-            <td><p><u>Exhibition Bredaphoto (NL).</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Exhibition Bredaphoto (NL).</button>
+            <div class="content">
                 //Together with Angelo Vermeulen, the DSTART team, and TU Delft university, we created a
                 speculative long-distance spacecraft. By infecting very specific asteroids with a cluster of
                 modules, we could harvest the asteroid’s resources and re-use them for the creation of more
@@ -290,20 +395,28 @@
                 module that will be placed in outer space for further prototyping.
                 <a href = "https://www.behance.net/gallery/70024755/EAS" target = "_blank">pictures</a> , 
                 <a href = "https://www.youtube.com/watch?v=rAZBYxPfa_0" target = "_blank">video</a> , 
-                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/bredaphoto/exhibition.jpg" target = "_blank">exhibition</a></td> 
-        </tr>
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/bredaphoto/exhibition.jpg" target = "_blank">exhibition</a>
+              </div>
 
+            </td> 
+        </tr>
+    
         <tr>
             <td>2018</td>
-            <td><p><u>Exhibition Parsons School of Design (US).</u></p>
+            <td>
+                <button type="button" class="collapsible">Exhibition Parsons School of Design (US).</button>
+            <div class="content">
+                //interactive experience exhibiting a VR/AR environment of the Aerolis project.
+              </div>
 
-                //interactive experience exhibiting a VR/AR environment of the Aerolis project.</td> 
+            </td> 
         </tr>
-
+        
         <tr>
             <td>2018</td>
-            <td><p><u>Finalist New York Biodesign challenge (US).</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Finalist New York Biodesign challenge (US).</button>
+            <div class="content">
                 // Together with five bio-engineers, 4 PhD students and 2 professors, we created Aerolis, a data
                 driven air filtration system. It was my task to measure/harvest wind velocity information and
                 create a system which filters air of bad pollutants. We also produced a scale model with biotin-
@@ -311,32 +424,46 @@
                 <a href = "http://aerolis.be/" target = "_blank">website</a> , 
                 <a href = "https://www.behance.net/gallery/63500963/Aerolis" target = "_blank">pictures</a> , 
                 <a href = "https://vimeo.com/274866530" target = "_blank">video_technical</a> , 
-                <a href = "https://vimeo.com/261007853" target = "_blank">video</a></td> 
+                <a href = "https://vimeo.com/261007853" target = "_blank">video</a>
+              </div>
+
+            </td> 
         </tr>
+        
 
         <tr>
             <td>2017</td>
-            <td><p><u>London sketchbook festival (UK).</u></p>
-
+            <td>
+                <button type="button" class="collapsible">London sketchbook festival (UK).</button>
+            <div class="content">
                 // An exhibition of a selection of my work, accompanied with a 15-minute presentation about the
                 importance of digital tools as a creative extension in the field of architecture and design.
-                Presented alongside the works of Jama Jurabaev and Steven Cormann.</td> 
+                Presented alongside the works of Jama Jurabaev and Steven Cormann.
+              </div>
+
+            </td> 
         </tr>
 
         <tr>
             <td>2017</td>
-            <td><p><u>Dodenaus film festival Mechelen (BEL).</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Dodenaus film festival Mechelen (BEL).</button>
+            <div class="content">
                 // Presentation of the short film “Coda” that was created for the 500th anniversary of Rembert
                 Dodoens, A Flemish botanist and scientist. The film was projected on the exterior of the Sint-
                 Rombouts cathedral (Mechelen, Belgium) as well as on the interior of the dome.
-                <a href = "https://vimeo.com/239624912" target = "_blank">video</a></td> 
+                <a href = "https://vimeo.com/239624912" target = "_blank">video</a>
+              </div>
+
+            </td> 
         </tr>
+        
 
         <tr>
             <td>2017</td>
-            <td><p><u>Renovation “Het Steen” (BEL).</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Renovation “Het Steen” (BEL).</button>
+            <div class="content">
                 // A collaborative process between the city of Antwerp, Soulmade and noArchitecten in which
                 we proposed a renovation of a castle heritage. I created a series of visualisations,
                 representations and interactive AR/VR applications of the different stages of the restoration.
@@ -347,17 +474,25 @@
                 <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steenc.jpg?raw=true" target = "_blank">picture_4</a>
                 <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steene.jpg?raw=true" target = "_blank">picture_5</a>
                 <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steenf.jpg?raw=true" target = "_blank">picture_6</a>
+              </div>
+
+            </td> 
+        </tr>
+        
+
+        <tr>
+            <td>2016</td>
+            <td>
+                <button type="button" class="collapsible">Nebraska Art private exhibition (US).</button>
+            <div class="content">
+                //A small exhibition of my early work which explored the process of glitching architectural
+                objects.
+              </div>
 
             </td> 
         </tr>
 
-        <tr>
-            <td>2016</td>
-            <td><p><u>Nebraska Art private exhibition (US).</u></p>
-
-                //A small exhibition of my early work which explored the process of glitching architectural
-                objects.</td> 
-        </tr>
+        
 
         <tr>
             <td></td>
@@ -366,29 +501,36 @@
 
         <tr>
             <td>2020</td>
-            <td><p><u>Ugly, Stupid, Honest</u></p>
+            <td>
+                <button type="button" class="collapsible">Ugly, Stupid, Honest</button>
+            <div class="content">
                 // An inquiry of machine poetics.
-                <a href = "https://www.behance.net/gallery/117377937/An-inquiry-of-machine-poetics" target = "_blank">video, images & description</a></p>
-                
+                <a href = "https://www.behance.net/gallery/117377937/An-inquiry-of-machine-poetics" target = "_blank">video, images & description</a>
+              </div>
+
             </td> 
         </tr>
-        <tr>
-                    <td>2020</td>
-                    <td><p><u>hyper chunk</u></p>
 
-                        // A reconfiguration of the facade as a platform for monitizing ad-space. Inspired by a flowershop in Turnhout who decided to 
+        <tr>
+            <td>2020</td>
+            <td>
+                <button type="button" class="collapsible">hyper chunk</button>
+            <div class="content">
+                // A reconfiguration of the facade as a platform for monitizing ad-space. Inspired by a flowershop in Turnhout who decided to 
                         close its doors after it turned out that, renting out its facade as ad-space, was more profitable than maintaining the shop.
                         <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/double%20look/double_look_a.jpg" target = "_blank">image_1 </a> , 
                         <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/double%20look/double_look_b.jpg" target = "_blank">image_2 </a> , 
                         <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/double%20look/double_look_c.jpg" target = "_blank">physical chunk </a>
-                        
-                    </td> 
-                </tr>
-        
+              </div>
+
+            </td> 
+        </tr>
+
         <tr>
             <td>2018</td>
-            <td><p><u>Copepod</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Copepod</button>
+            <div class="content">
                 // Experimenting with a real time Gravity sketch and Blender based production workflow in
                 Eevee.
                 <a href = "https://www.behance.net/gallery/73040913/Copepod" target = "_blank">copepod media</a> , 
@@ -405,31 +547,47 @@
                 <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodk.jpg" target = "_blank"> 11 </a> ,
                 <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodl.jpg" target = "_blank"> 12 </a> ,
                 <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodm.jpg" target = "_blank"> 13 </a> ,
-                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodo.jpg" target = "_blank"> 14 </a> ,
-                
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodo.jpg" target = "_blank"> 14 </a>
+              </div>
+
+            </td> 
         </tr>
+
+            
         <tr>
             <td>2017</td>
-            <td><p><u>Skizoid</u></p>
-
+            <td>
+                <button type="button" class="collapsible">Skizoid</button>
+            <div class="content">
                 // The Idea of intersecting boundaries between algorithmic and traditional design approaches. A
                 conversation between hard and soft, digital and physical, expected and unexpected.
                 <br> <a href = "https://vimeo.com/218686019" target = "_blank">video_1 </a> , 
                 <a href = "https://vimeo.com/218712558" target = "_blank">video_2 </a> , 
                 <a href = "https://www.behance.net/gallery/51966141/Sui_generis_05" target = "_blank">video_3 </a> , 
-                <a href = "https://vimeo.com/250414185" target = "_blank">video_4 </a></td> 
-        </tr>
-        <tr>
-            <td>2016</td>
-            <td><p><u>Synesthesia</u></p>
+                <a href = "https://vimeo.com/250414185" target = "_blank">video_4 </a>
+              </div>
 
+            </td> 
+        </tr>
+
+        <tr>
+            <td>2017</td>
+            <td>
+                <button type="button" class="collapsible">Synesthesia</button>
+            <div class="content">
                 // The development of an algorithmic system that creates spaces depending on the input
                 protocol. As it is voxel based instead of primitive based, structures are created which could
                 have not been achieved traditionally.
                 <a href = "https://vimeo.com/269765936?from=outro-embed" target = "_blank">video_1</a> , 
                 <a href = "https://www.behance.net/gallery/49348641/Sui_generis_03" target = "_blank">media_1 </a> , 
-                <a href = "https://www.behance.net/gallery/50451659/Sui-_generis_04" target = "_blank">media_2 </a></td> 
+                <a href = "https://www.behance.net/gallery/50451659/Sui-_generis_04" target = "_blank">media_2 </a>
+              </div>
+
+            </td> 
         </tr>
+
+
+       
         
         <tr>
             <td></td>
@@ -486,6 +644,7 @@
                     <br> Adobe Medium 
                     <br> Fusion360: 
                     <br> unity:
+                    
                 </td> <td style="border: 0px ; vertical-align: top;"> 
                     <br> ■■■■□□□□□□
                     <br> ■■■■□□□□□□
@@ -496,22 +655,47 @@
                     <br> ■■■■■□□□□□
                     <br> ■□□□□□□□□□ 
                     
+                    
+                    
                 </td> 
             </th>
-         </table>
-         <br><u>version control, workflow and automatisation</u> 
-         <br>python, linux ubuntu, git, bash,
-         <br>
-         <br><u>other skills</u>
-         <br>html, css, open shading language
-         <br>familiar with renderengines: fstorm, cycles, eevee, mantra, karma, octane
-         <br>
-         <br><u>Description</u>
-         <br>I use <a href = "https://www.sidefx.com/" target = "_blank">SideFX Houdini </a>for procedural and non-procedural work and the generation of synthetic datasets. 
-         Houdini has been my main driver for 6 years. When working with geometric models, I mainly output renders from the native houdini renderengines Karma or Mantra. 
-         <br>My Houdini expertise extends to SOP (surface operators), VOP (vector operators), LOP (lighting operators), PDG (procedural dependency graph), CHOP (channel operators) & COP (composite operators) contexts. 
-         I use vex (based on C++) or python as a way of optimizing and automating node structures and to express computational Logic inside the Houdini Framework.
-         <br>I use <a href = "https://www.blender.org/" target = "blank">Blender</a> for visualisation, world building, art direction and prototyping. It is a fast, intuitive and versatile mesh based modeling software that allows me to rapidly sketch possible outcomes of projects.
+
+
+</table>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" class="collapsible">other skills</button>
+                <div class="content">
+                    version control, workflow and automatisation: python, linux ubuntu, git, bash.
+                    <br>html, css, java, javascript, open shading language 
+                    <br>familiar with renderengines: fstorm, cycles, eevee, mantra, karma, octane
+                  </div>
+    
+                </td> 
+            </tr>
+
+         
+         
+         
+         <tr>
+            <td></td>
+            <td>
+                <button type="button" class="collapsible">Description</button>
+            <div class="content">
+                I use <a href = "https://www.sidefx.com/" target = "_blank">SideFX Houdini </a>for procedural and non-procedural work and the generation of synthetic datasets. 
+                Houdini has been my main driver for 6 years. When working with geometric models, I mainly output renders from the native houdini renderengines Karma or Mantra. 
+                <br>My Houdini expertise extends to SOP (surface operators), VOP (vector operators), LOP (lighting operators), PDG (procedural dependency graph), CHOP (channel operators) & COP (composite operators) contexts. 
+                I use vex (based on C++) or python as a way of optimizing and automating node structures and to express computational Logic inside the Houdini Framework.
+                <br>I use <a href = "https://www.blender.org/" target = "blank">Blender</a> for visualisation, world building, art direction and prototyping. It is a fast, intuitive and versatile mesh based modeling software that allows me to rapidly sketch possible outcomes of projects.
+              </div>
+
+            </td> 
+        </tr>
+
+     
+         
          
 
 
@@ -519,21 +703,24 @@
         </tr>
 
         <tr>
-            <td>2018</td>
+            <td></td>
             <td><h2>// Other experience</h2></td> 
         </tr>
 
         <tr>
-            <td>2021</td>
-            <td>part of multiple studio reviews 
-                <br>@Texas A&M school of Architecture, 
+            <td>2017</td>
+            <td>
+                <button type="button" class="collapsible">part of multiple studio reviews</button>
+            <div class="content">
+                @Texas A&M school of Architecture, 
                 @University of Pennsylvania, 
                 @Bartlett UCL, 
                 @University of Tennessee, 
                 @The University of Texas at Austin
                 @TU Wien Faculty of Architecture and Planning
                 @Faculty of Architecture KU Leuven
-            
+              </div>
+
             </td> 
         </tr>
 
@@ -558,7 +745,7 @@
         </tr>
         
         <tr>
-            <td>2018</td>
+            <td></td>
             <td><h2>// Interests</h2></td> 
         </tr>
         <tr>
@@ -575,18 +762,25 @@
         </tr>
 
         <tr>
-            <td>..................................</td>
+            <td style="opacity: 0;">   ...................</td>
             <td><a>putteneersjoris@gmail.com</a> | 
                 <a href = "https://www.behance.net/jorisputteneers" target = "_blank">behance</a> | 
                 <a href = "http://jorisputteneers.tumblr.com/" target = "_blank">old_website</a> |
                 <a href = "https://www.linkedin.com/in/joris-putteneers-8b828b91/" target = "_blank">linkedin</a> | 
                 <a href = "https://github.com/putteneersjoris" target = "_blank">github</a></td>  
         </tr>
-
+</table>
         
         </table>
     </div>
+
+</div>
+<script src="js/sketch_b.js"></script>
+<script src="js/collapsable.js"></script>
+
 </body>
 <p>back to <a href = "../index.html">main</a></p>
+
+
 </div>
 </html>
