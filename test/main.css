@@ -1,25 +1,64 @@
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap);
 html, body{
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
 }
 .webgl{
-    position: fixed;
+    z-index: -1;
+    position: absolute;
     top: 0px;
     left: 0px;
     outline:none;
+    width: 500px;
+    height: 50%;
+    padding: 0px; 
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
     
 }
 
+.container{
+    
+    padding: 0px; 
+    margin: 0px;
+    
+}
 .point{
     position: absolute;
     top: 50%;
     left: 50%;
-    color: white;
-    
+      
 }
 .point:hover .text{
     opacity: 1;
     
 }
+
+@media only screen and (max-width: 760px) {
+    .webgl{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        outline:none;
+        width: 500px;
+        height: 50%;
+        padding: 0px; 
+        margin: 0px;
+        background-color: rgb(0, 0, 0);
+        
+        
+    }
+
+    .point:hover .text{ 
+        opacity: 0;
+    }
+    .point a {
+        
+        text-decoration:none;
+        color: rgb(255, 255, 255)
+        
+        }
+  }
 
 .point.visible .label{
     transform: scale(1,1);
@@ -35,14 +74,14 @@ height: 20px;
 border-radius:50%;
 background-color: rgba(255, 0, 0, 0);
 border: 0px solid rgb(87, 87, 87);
-color: rgb(255, 255, 255);
+
 font-family: 'Times New Roman', Times, serif;
 margin: 0px;
 text-align: center;
 line-height: 20px;
 font-weight: lighter;
 font-size: 15px;
-
+pointer-events: auto;
 transform: scale(0,0);
 transition: transform 0.05s;
 
@@ -52,7 +91,7 @@ transition: transform 0.05s;
 .point a {
     
     text-decoration:none;
-    color: white
+    color: rgb(255, 255, 255)
     
     }
 
@@ -77,6 +116,13 @@ transition: transform 0.05s;
     
 }
 
-
+ .header_on_sphere a{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    line-height: 5px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    pointer-events: auto;
+}
 
 /*# sourceMappingURL=main.css.map*/
