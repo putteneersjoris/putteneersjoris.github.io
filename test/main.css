@@ -39,28 +39,10 @@ html, body{
 }
 
 @media only screen and (max-width: 760px) {
-    .webgl{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        outline:none;
-        width: 500px;
-        height: 50%;
-        padding: 0px; 
-        margin: 0px;
-        background-color: rgb(0, 0, 0);   
-    }
-
+    
     .point:hover .text{ 
         opacity: 0;
     }
-    .point a {
-        
-        text-decoration:none;
-        color: rgb(255, 255, 255)
-        }
-
-
     
   }
 
@@ -129,14 +111,14 @@ transition: transform 0.05s;
     pointer-events: auto;
 }
 
-@media only screen and (max-width: 760px) {
+/* @media only screen and (max-width: 760px) {
     
     .container_header {
         margin: auto;
-        width: 100%;
+        width: 100%; */
         /* margin-top: 50px; */ 
  
-    }
+    /* }
     .header{
         position: relative;
         z-index: 1;
@@ -168,7 +150,7 @@ transition: transform 0.05s;
         color: rgb(255, 255, 255);
         font-family: 'Quicksand', sans-serif;
     }
-}
+} */
 /*
 @media only screen and (min-width: 760px) {
     .container_header {
@@ -215,20 +197,22 @@ transition: transform 0.05s;
 
 }*/
 
-@media only screen and (min-width: 760px) {
+
     
     .header{
-        /* border: 5px solid rgb(22, 42, 218); */
+        
         align-content: left;
         width: 400px;
-        /* border: 5px solid rgb(128, 4, 0); */
+        
         position: relative;
         margin: 10px;
         z-index: 1;
+        
+        
        
     }
     .title{
-        /* border: 5px solid green; */
+        
         font-size: 40px;
         line-height: 50px;
         color: rgb(255, 255, 255);
@@ -240,13 +224,13 @@ transition: transform 0.05s;
         
         height: 6px;
         width: 320px;
-        /* border: 5px solid green; */
+        
         
         background-color: rgb(255, 255, 255);
         
     }
     .text{
-        /* border: 5px solid green; */
+        
         margin-top: 10px;
         font-size: 0.75em;
         color: rgb(255, 255, 255); 
@@ -259,15 +243,38 @@ transition: transform 0.05s;
         margin-left: 15px;
         text-decoration: none;
         line-height: 0px;
-        /* border: 5px solid green; */
         
         font-size: 20px;
         color: rgb(255, 255, 255);
         font-family: var(--headingfont);
     }
 
-}
+.sub-header{
+    color: rgba(255, 255, 255, 0.5);       
+    float: right;
+    z-index: 1;  
+    right:0px;
+    bottom:10px;
+    font-style: italic; 
+    position: absolute;
+    opacity: 1;
+    margin-right: 5%;
+    font-size: 0.75em;
+    
+    
 
 
+
+    }
+
+
+    @media only screen and (max-width: 760px) {
+        .sub-header{
+            
+            opacity: 0;
+            
+            }
+        
+      }
 
 /*# sourceMappingURL=main.css.map*/
