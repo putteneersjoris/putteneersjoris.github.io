@@ -57,7 +57,7 @@ top: -20px;
 left: -20px;
 width: 20px;
 height: 20px;
-border-radius:50%;
+
 background-color: rgba(255, 0, 0, 0);
 border: 0px solid rgb(87, 87, 87);
 
@@ -66,18 +66,23 @@ margin: 0px;
 text-align: center;
 line-height: 20px;
 font-weight: lighter;
-font-size: 15px;
+font-size: 20px;
 pointer-events: auto;
 transform: scale(0,0);
 transition: transform 0.05s;
-
+color: rgb(255, 255, 255);
+padding: 6px;
+/* border: 1px rgb(255, 255, 255) solid; */
+/* border-radius:50%; */
 
 }
 
 .point a {
     
     text-decoration:none;
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
+    
+
     
     }
 
@@ -89,7 +94,7 @@ transition: transform 0.05s;
     padding: 5px;
     
     background: rgba(0, 0, 0, 0);
-    /* border: 1px solid rgb(0, 0, 0); */
+    /* border: 1px solid rgb(0, 0, 0);  */
     color: rgb(255, 255, 255);
     line-height: 1.3em;
     font-family: monospace;
@@ -107,7 +112,7 @@ transition: transform 0.05s;
     font-size: 25px;
     line-height: 5px;
     text-decoration: none;
-    color:rgb(4, 0, 255);
+    color:rgb(255, 255, 255);
     pointer-events: auto;
 }
 
@@ -213,6 +218,8 @@ transition: transform 0.05s;
     }
     .title{
         
+        /* font-size: 40px;
+        for ui */
         font-size: 40px;
         line-height: 50px;
         color: rgb(255, 255, 255);
@@ -268,13 +275,6 @@ transition: transform 0.05s;
     }
 
 
-    @media only screen and (max-width: 760px) {
-        .sub-header{
-            
-            opacity: 0;
-            
-            }
-        
-      }
+  
 
 /*# sourceMappingURL=main.css.map*/
