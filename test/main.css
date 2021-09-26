@@ -59,21 +59,21 @@ width: 20px;
 height: 20px;
 
 background-color: rgba(255, 0, 0, 0);
-border: 0px solid rgb(87, 87, 87);
+
 
 font-family: 'Times New Roman', Times, serif;
 margin: 0px;
 text-align: center;
 line-height: 20px;
-font-weight: lighter;
-font-size: 20px;
+font-weight: bolder;
+font-size: 25px;
 pointer-events: auto;
 transform: scale(0,0);
 transition: transform 0.05s;
 color: rgb(255, 255, 255);
 padding: 6px;
-/* border: 1px rgb(255, 255, 255) solid; */
-/* border-radius:50%; */
+/* border: 1px rgb(255, 255, 255) solid; 
+border-radius:50%;  */
 
 }
 
@@ -81,10 +81,16 @@ padding: 6px;
     
     text-decoration:none;
     color: rgb(255, 255, 255);
-    
-
-    
+  
     }
+.point a:hover {
+    
+    text-decoration:none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+  
+    }
+
 
 .point .text{
     position: absolute;
@@ -255,6 +261,9 @@ padding: 6px;
         color: rgb(255, 255, 255);
         font-family: var(--headingfont);
     }
+    .sub-menu a:hover{
+        font-size: 23px;
+    }
 
 .sub-header{
     color: rgba(255, 255, 255, 0.5);       
@@ -268,13 +277,11 @@ padding: 6px;
     margin-right: 5%;
     font-size: 0.75em;
     
-    
-
-
-
     }
 
 
-  
+.cv_text{
+    color: red;
+}
 
 /*# sourceMappingURL=main.css.map*/
