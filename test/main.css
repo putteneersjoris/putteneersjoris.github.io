@@ -81,7 +81,7 @@ border-radius:50%;  */
 .point a {
     
     text-decoration:none;
-    color: rgb(255, 255, 255);
+    color: white;
   
     }
 .point a:hover {
@@ -89,6 +89,7 @@ border-radius:50%;  */
     text-decoration:none;
     color: rgb(255, 255, 255);
     font-size: 30px;
+    /* color: rgb(145, 161, 0); */
   
     }
 
@@ -121,6 +122,7 @@ border-radius:50%;  */
     text-decoration: none;
     color:rgb(255, 255, 255);
     pointer-events: auto;
+    color: rgb(145, 161, 0);
 }
 
 /* @media only screen and (max-width: 760px) {
