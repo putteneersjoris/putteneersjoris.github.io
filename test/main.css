@@ -45,10 +45,7 @@ html, body{
     .point:hover .text{ 
         opacity: 0;
     }
-    .webgl{
-        opacity: 0;
-        
-    }
+    
   }
 
 .point.visible .label{
