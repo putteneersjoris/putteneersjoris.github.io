@@ -388,7 +388,7 @@
     }
     .project_back_link a:hover{
         
-        background-image: url(1.gif);
+        background-image: url(../1.gif);
         background-repeat: repeat;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
