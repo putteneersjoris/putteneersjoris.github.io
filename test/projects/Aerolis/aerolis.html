@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+  window.onload = init;
+  function init() {
+      if (window.Event) {
+      document.captureEvents(Event.MOUSEMOVE);
+      }
+      document.onmousemove = getCursorXY;
+  }
+  
+  function getCursorXY(e) {
+      document.getElementById('cursorX').value = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+      document.getElementById('cursorY').value = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  }
+  </script>
+<link rel="icon" type="image/png" href="../icon.png" sizes="32x32">
+<title>putteneersjoris.xyz</title>
+
+</head>
+<body>
+
+
+<div class="project_container">
+  <div class="project_header">
+    <h2 >Aerolis  (↺)</h2> 
+    
+  </div>
+
+  
+  
+  <div class="project_text_heading">
+     
+      <p>        
+        A data driven air filtration system.
+        Air pollution is one of the biggest global environmental and health challenges and a global action plan is needed. In response, the Aerolis project is an air purifying biological artwork for urban and industrial environments that mimics the natural air purifying functionality of tree bark. The 3D structure is based on algorithmic design, incorporating data on wind velocities and directions and grows in harmony with its surroundings. Its surface is biofunctionalized with tailor-made microorganisms that break down air pollutants in urban and industrial environments. <br><br> The Aerolis Project will take part in the 2018 Biodesign Challenge, held on the 21st and 22nd of June at the Museum of Modern Art in New York City.       
+        <br><br>
+        Made in collaboration with: 
+        <br>
+        <a href="">Prof. Marjan De Mey</a>,
+        <a href="">Prof. Wim Van Criekinge</a> 
+        <a href="">Ir. Bram Ulrichts</a>,
+        <a href=""> Ir. Arne Saldí</a>,
+        <a href="">Ir. Kylian Van Damme</a>,
+        <a href=""> Ir. David Ysebaert</a> 
+        <a href=""> Dr. D. Bauwens</a>,
+        <a href=""> Dr. L. Coussement</a>,
+        <a href=""> Dr. B. De Paepe</a>,
+        <a href=""> Dr. M. van Brempt</a> 
+      <br><br>
+        
+        The two shortfilms can be found <a target="_blank" href="https://vimeo.com/261007853">here</a>  and <a target="_blank" href="https://vimeo.com/274866530">here</a>  
+        <br>
+        Additional information can be found on the official <a target="_blank" href="http://aerolis.be/">website</a>.
+      </p>
+  </div>
+  
+<div class="project_back_link"> 
+  <a href="../projects.html"><<a>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+  
+  <div class="gifs">
+    <div class="cell_absolute">
+      <img src="./images high/1.jpg" alt="">
+      <div class="hidden-mobile">
+        <div class="project_text">frame 749 00:25</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gifs">
+    <div class="cell_absolute">
+      <img src="./images high/7.jpg" alt="">
+      <div class="hidden-mobile">
+        <div class="project_text">frame 845 00:28</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gifs">
+    <div class="cell_absolute">
+      <img src="./images high/2.jpg" alt="">
+      <div class="hidden-mobile">
+        <div class="project_text">frame 421 00:14</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gifs">
+    <div class="cell_absolute">
+      <div class="embed-container"><iframe src="https://player.vimeo.com/video/261007853?h=85ef05d2a4  " frameBorder="0"></iframe></div>
+      
+    </div>
+  </div>
+
+
+  
+<table style="width:100%;  vertical-align: top;">
+ 
+    <br><br>
+  <tr>
+    <td style=" vertical-align: top; padding:15px 15px 15px 0px;" >
+      <div class="project_text" >
+        <p class="table_text_header">Context </p><p>
+          Aerolis started out as a concept to play a role in air purification. While thinking of ideas to implement an air filtration unit that could create a local bubble of clean air, the project ended up as a biofunctionalized organic design that is based on wind data and exhibits a scalable character. Instead of being installed in a private context and functioning very locally, Aerolis could also be envisioned as an organic form surrounding cities or parks, uniquely designed in accordance with the local climate and harboring biological air filtration technologies to act upon air pollution.
+        </p>
+      </div>
+      <div class="project_text">
+        <p class="table_text_header">Technology</p>
+        <p>
+          In order to transform the 3D shape to a real air purifying device we used biotechnology and synthetic biology techniques. Our shape will be 3D printed in an innovative filament that allows us to bind specialized microorganisms which can purify air. The project's primary focus is to enable air purification by degradation of volatile organic compounds (VOCs), a common component of exhaust gases harmful for human health. Being able to functionalize 3D printed shapes with biologicals has an abundance of potential applications.
+          <br><br>
+          We decided to use a biotin-streptavidin interaction to functionalize the 3D printed shape with these (improved) VOC-degrading microorganisms. The interaction between streptavidin and biotin is one of the strongest non-covalent interactions in Nature. Biotin-streptavidin interaction is a widely used tool and a paradigm for protein–ligand interactions. To facilitate the work that needs to be done for biofunctionalization, we divided the work into two different work packages: 'Biofunction' and 'Filament'. 'Biofunction' is a work package dedicated entirely to engineering the right bacteria for our project. As we need biotin in our shape to connect our engineered bacteria to our air purifying device, the work package 'Filament' works on creating another type of PLA bioplastic impregnated with biotin.
+          <br><br>
+          We rounded up the tech part with the development of an air quality sensor with the aim of measuring, reporting and visualizing the air quality in and around the Aerolis structure. On the long term, this sensor could eventually be replaced by a biosensor consisting of pollutant-detecting microorganisms.
+        </p>
+      </div>
+    </td>
+    <td style=" vertical-align: top; padding:15px 15px 15px 0px;">
+      <div class="project_text">
+        <p class="table_text_header">Design</p><p>
+          Aerolis is a design which on one hand hosts a biofilter and on the other hand allows it to integrate in an urban context. The effectiveness of a biofilter depends on the air flow and its surface area. These parameters formed a basis for the shape design: Aerolis is a structure that grows towards the dominant wind profile in a certain point in space. The shape originates from a simulation that aggregates three-dimensional wind data as vectors in a Cartesian coordinate system and the model grows in discrete steps along the vertical z-axis.
+          <br><br>
+          The simulation starts on the ground level with a circular base form, consisting of a finite series of points. This 'old' base layer is used to calculate the next layer. By deforming the old layer in the direction of the strongest wind vectors present at the new level, a new layer is composed. Vertical growth is realized by adding this new layer upon the previous layer. A recursive implementation of this algorithm eventually results in the shape of Aerolis.
+          <br><br>
+          From this, it is clear that the exact shape is strongly dependent on the wind profile of its surroundings. In this way, every Aerolis structure is different for another location. The prototype designed for the Biodesign Challenge project has grown on wind data from the city of Los Angeles (Global Forecast System / National Centers for Environmental Prediction / National Weather Service / National Oceanic and Atmospheric Administration). Other simulations have been performed for Ghent, New York, Istanbul, Seoul, etc. In theory, every location can have their own Aerolis provided there are sufficient wind data to run the simulation. This interesting feature about the design is an asset with regard to the integration of the structure in a specific location, e.g. around the city or in an open public space. Every city can identify with its own structure and embrace it as a part of their city identity.   
+          <br><br>
+          A last aspect of the Aerolis shape is its internal structure. Air purification will occur via an upward air flow, so using a hollow body would cause a significant loss of purification potential, since the air will not be resisted and thus will flow straight out on the top side of the Aerolis structure. To counter this, we have decided to optimize the surface area by filling up the entire construction with a spongeous/foamlike pattern that enables the air to move through in a vertical direction, but still delivers enough resistance to give Aerolis the time to purify the passing air. 
+        </p>
+      </div>
+    
+    </td> 
+  </tr>
+ 
+</table>
+
+
+
+
+<div class="gifs">
+  <div class="cell_absolute">
+    <img src="./images high/4-8-9.jpg" alt="">
+    
+      <div class="project_text">detail 1|2|3</div>
+    
+  </div>
+</div>
+
+<br><br><br>
+
+<div class="project_text">
+  <p class="table_text_header">Sensor </p><p>
+    Finally, we also conducted research on the possible use of sensors as a part of the Aerolis structure. These can be installed to provide information on certain parameters that are important for the maintenance and well-functioning of the biofilter or they can be used to report the status of the air surrounding Aerolis. This last type of sensor was programmed by our team by using Arduino. The sensor was calibrated by sampling a number of locations. These locations were quantitively classified for air quality to construct a linear regression model, based on which a certain measured input is quantitatively translated to an air quality. This output is fed to e.g. an LED light which can show a green colour in case of a relatively good air quality and a red colour for a worse air quality.
+  </p>
+</div>  
+
+<div class="gifs">
+  <div class="cell_absolute">
+    <img src="./bio science/2.jpg" alt="">
+    <div class="project_text">particle sensor</div>
+  </div>
+</div>
+
+<br><br>
+
+<table style="width:100%;  vertical-align: top;">
+
+<tr>
+  <td style=" vertical-align: top; padding:15px 15px 15px 0px;" >
+    <div class="project_text" >
+      <p class="table_text_header">Filament</p><p>
+    In the filament work package, we tried to produce a plastic filament that’s activated and susceptible to biological appendages. The filament can subsequently be used for printing the desired 3D structure. PLA (polylactic acid) was chosen as basic plastic carrier because of its biodegradability, optimal melting temperature, and general easy-to-print characteristics. In order to enhance the function of the PLA, we needed to attach microorganisms to the filament. In order to get the microorganisms attached to the final structure, a moiety needs to be present in order for the filament to capture them, bind them and keep them there.
+    <br><br>
+    General overview: the prototype 3D printed structure that's activated with biotin, will be susceptible for adhesion of proteins via biotin-avidin complexation.
+    <br><br>
+    We chose to assess the biotin-(strept)avidin complex, since it’s a very robust and in most circumstances fairly forgiving in its binding when fused to other proteins. Also, thanks to the inert properties of biotin the adherence to or impregnation of the filament can be accomplished in quite harsh environments, without damaging any structures.
+    <br><br>
+    There are three straightforward approaches to biologically publicize the biotin on the PLA filament:
+    <br><br>
+    Method 1: Biotin can be actively linked to the filament or final structures. <br>
+    Method 2: Biotin can be impregnated in PLA, from which filament can be created for 3D printing.<br>
+    Method 3: Biotin can be coated on the filament or final structures.<br><br>
+    Since the first option is generally far too expensive to make bulk quantities of biotin-activated PLA, only option 2 and 3 were assessed in this work package. For more information on this topic, please click here.
+    <br><br>
+    Using microorganisms expressing a fusion protein comprising monomeric variants of GFPuv (mGFPuv2) and Streptavidin (mSA2), we could demonstrate adhesion to biotinylated PLA. The biotin-mSA2 interaction is strong enough to resist multiple washes with saline.
+    <br><br>
+    As part of the future vision of Aerolis, we might step away from using biodegradable plastic as material. This is a static rendering of a model that in fact is conceived as dynamic and growing in harmony with its environment. In the long run, it could be more beneficial if the shape would adapt according to real-time changes in wind, precipitation and air pollution. This could be accomplished by using growing biological materials such as fungi (see Magma Nova / GLIMPS) or impregnating PLA with thermophilic bacterial spores (see Resilux and Centexbel).
+      </p>
+    </div>
+    
+  </td>
+  <td style=" vertical-align: top; padding:15px 15px 15px 0px;">
+    <div class="project_text">
+      <p class="table_text_header">Biofunction</p><p>
+        Air pollution can be captured and degraded by microorganisms who use the polluting components as an energy source on which they grow. Various microorganisms that degrade individual VOCs have been reported, and genomic information related to their phylogenetic classification and VOC-degrading enzymes is available.
+        <br><br>
+        Using synthetic biology and metabolic engineering methodologies microorganisms can be improved to degrade VOCs in a more efficiently way. Even more, they can be modified in order to degrade multiple VOCs. Especially, Escherichia coli and Pseudomonas putida are already altered to sense these toxic molecules and enhance their degradation.
+        <br><br>
+        In order to functionalize the 3D printed shape with these (improved) VOC-degrading microorganisms, these microorganisms should display a streptavidin on their outer membrane surface. In addition, to enable microbial growth, i.e. degradation of the VOCs, these microorganisms will need water. To this end, we investigated the use of biological nucleation proteins. These proteins enhance the formation of ice crystals. In this context, these proteins may help the condensation process and provide the required water for the microorganisms to grow. Furthermore, this will also ensure that the air flowing through our 3D shape is humid enough. To achieve this, we used the InaZ gene, an ice nucleating protein (INP) of Pseudomonas syringae. These INP’s are known to cause ice damage on plants and are also frequently used in snowmakers. Recently however, Pseudomonas syringae was also found in clouds, where they might help in rain formation.
+        <br><br>
+        To evaluate this approach, we have designed and created several constructs. About which you can read more here.
+       
+        <br><br>
+      </p>
+      
+      <div class="gifs">
+        <div class="cell_absolute">
+          <img src="./bio science/1.jpg" alt="">
+        </div>
+      </div>
+      
+
+    </div>
+  
+  </td> 
+</tr>
+
+
+
+
+</table>
+
+
+
+
+
+<div class="gifs">
+  <div class="cell_absolute">
+    <img src="./concept art/1.gif" alt="">
+    <div class="hidden-mobile">
+      <div class="project_text">Aerolis conept art 1-3</div>
+    </div>
+  </div>
+  <div class="cell_absolute">
+    <img src="./concept art/2.gif" alt="">
+    <div class="hidden-mobile">
+      <div class="project_text">Aerolis conept art 4-6</div>
+    </div>
+  </div>
+  <div class="cell_absolute">
+    <img src="./concept art/3.gif" alt="">
+    <div class="hidden-mobile">
+      <div class="project_text">Aerolis conept art 6-7</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<br><br><br><br>
+
+<div class="gifs">
+  <div class="cell_absolute">
+    <img src="./360 images/a.jpg" alt="">
+    <div class="hidden-mobile">
+      <!-- <div class="project_text">360 Spherical Panorama</div> -->
+    </div>
+  </div>
+  <div class="cell_absolute">
+    <img src="./360 images/b.jpg" alt="">
+    <div class="hidden-mobile">
+      <!-- <div class="project_text">360 Spherical Panorama</div> -->
+    </div>
+  </div>
+  <div class="cell_absolute">
+    <img src="./360 images/c.jpg" alt="">
+    <div class="hidden-mobile">
+      <!-- <div class="project_text">360 Spherical Panorama</div> -->
+    </div>
+  </div>
+ 
+</div>
+
+
+<div class="gifs">
+  <div class="cell_absolute">
+    <img src="./360 images/d.jpg" alt="">
+    <div class="hidden-mobile">
+      <!-- <div class="project_text">360 Spherical Panorama</div> -->
+    </div>
+  </div>
+  <div class="cell_absolute">
+    <img src="./360 images/e.jpg" alt="">
+    <div class="hidden-mobile">
+      <!-- <div class="project_text">360 Spherical Panorama</div> -->
+    </div>
+  </div>
+  <div class="cell_absolute">
+    <img src="./360 images/f.jpg" alt="">
+    <div class="hidden-mobile">
+      <!-- <div class="project_text">360 Spherical Panorama</div> -->
+    </div>
+  </div>
+</div>
+
+<div class="visible-mobile">
+<div class="gifs">
+  <div class="cell_absolute">
+    <img src="./360 images/1_mobile.gif" alt="">
+    <div class="project_text">360 Spherical Panoramas</div>
+  </div>
+</div>
+</div>
+
+
+<table style="width:100%;  vertical-align: top;">
+  <br><br>
+    <tr>
+      <td style=" vertical-align: top; padding:15px 15px 15px 0px;" >
+        <div class="project_text" >
+          <p class="table_text_header">Implementation</p><p>
+            It is necessary that the technology present in the Aerolis structure functions well to get a desired result in terms of air purification. Important parameters for this are air flow and a decent surface contact time. After collecting and consulting information on the functioning of biofilter and other technologies, we found that an unforced air stream would not pass through the structure efficiently enough for VOC removal. The team had an interesting talk with a professional bio-engineer working in the sector of air and odour pollution. He taught us about vertical biofilter installations and the need for additional pressure for the air to sufficiently pass through the structure so it does not just glance off the walls.
+            <br><br>
+            This challenge brought us to a concrete application of the Aerolis structure in an urban environment. For this, we focus on a case in our hometown Ghent, but it is applicable in all kinds of modern cities. One of the city’s main squares, the Vrijdagmarkt, has an underground parking lot. In a parking lot, many cars pass and they accelerate and decelerate multiple times. It is known that an engine produces most VOCs, particulate matter and other pollutants at these moments. Therefore, the parking lot is vented and air is circulated underground. The replaced air leaves the parking lot via ventilation shafts giving out on the square itself. This is illustrated in the image of the Vrijdagmarkt below.
+            <br><br>
+            These shafts emit a strong air stream with a pressure higher than the atmospheric pressure. Also, it is air that might have a somewhat higher concentration of pollutants (coming from cars) than average city air. To further support this idea, we qualitatively measured the outgoing parking lot gases on ground level with the sensor we constructed during this project. Without having a quantitative result, this measurement might give an indication of the pollutant load of the air from these shafts. And indeed, the result was slightly more negative when compared to the measurement on another square in Ghent, away from such ventilation shaft.
+            <br><br>
+            As a result from this, we propose this specific case as a short-term application of Aerolis in a city environment: the air stream is under higher pressure, making sure it will pass vertically through the structure, and the pollutant concentration might be a little higher than already mixed city air, allowing a higher removal and better conditions for the VOC-removing microorganisms present on the structure. Also, in this case of the Vrijdagmarkt, the design can be fully integrated in the image of a city and it can be accessible for the people living in the city. Of course, underground parking lots are not exclusive in Ghent as they occur in most cities, so this idea can be extended to other locations as well, with other Aerolis shapes.
+          </p>
+
+        
+        </div>
+        <div class="project_text" >
+          <p class="table_text_header">Sustainability</p><p>
+          The larger part of today’s methods for air purification makes use of non-sustainable products like chemicals or needs a great amount of energy to function like a thermal oxidizer or the activation and regeneration of active carbon. Aerolis however, makes use of a biofilter to purify the surrounding air. Only maintenance concerning the humidity and the nutrients available in the biofilter will be needed to ensure a steady purification, which is much less energy intensive as compared to the other air purification methods.
+          <br><br>
+          The design itself has a wide variety of products from which it can be created. PLA (polylactic acid) would be the preferred choice because of its biodegradability, its favourable printing characteristics and the possibility to be modified with biotin and functionalising proteins. However, the choice of material for the design can vary depending on which properties would be needed in a certain situation/location, as long as it proves to be a durable choice as a biofilter.
+          </p>
+        </div>
+
+
+      </div>
+      <div class="project_text" >
+        <p class="table_text_header">Feasibility</p><p>
+          Transitioning from a conceptual prototype to the real-world, full-size model still poses a few challenges.
+          <br><br>
+          First of all, more research has to be conducted into the structural stability of the model. Stability is of minor importance for a small prototype, but by scaling everything up, the chance for a collapse will be increased. Further computer simulations will point out if there is any need for additional supports.
+          <br><br>
+          A fluid dynamics simulation is also required since Aerolis was designed from an aesthetical point-of-view to grow towards the wind, but there's no scientific evidence that this shape is the aerodynamically best shape. For an optimal efficiency, the shape would have to be optimized for the volumetric flow rate. If larger quantities of air can enter the structure, then there will be more potential for the degradation of volatile organic compounds.
+          <br><br>
+          Another important factor in the overall efficiency is the retainment of bacteria/enzymes to the structure. There is direct evidence that bacteria and enzymes can be attached to PLA, but there is no indication of how long this bond will last (for example in heavy weather circumstances) and there's also no indication of how these bacteria would be able to survive in low-nutrient environments.
+          <br><br>
+          The last determining factor is the material that the Aerolis structure will be made of. For now, it is shown that PLA can be used to physically construct the model and that PLA can be augmented with bacteria or enzymes, but suppose that PLA turns out to be too weak to be scaled up and another material is used (polyamide for example). There is no guarantee that other materials are suitable for the same augmentation technology.
+        </p>
+      </div>
+      
+      </td>
+      <td style=" vertical-align: top; padding:15px 15px 15px 0px;">
+        <div class="project_text">
+          <p class="table_text_header">Human Impact</p>
+          <p>
+            Aerolis will act as a biofilter and purify the surrounding air, so it will create a local oasis of pure air. The “Proceedings of the National Academy of Sciences” reports that for every 10 micrograms per cubic meter increase of PM10 in the air a person will lose seven months of their life expectancy. For the even smaller PM2.5, an identical increase steals an entire year off your life (read more about air pollution here). This reduced life expectancy was mapped for Europe, where for densely populated areas such as Flanders and The Netherlands, a reduction of about 3 years is predicted. Aerolis will try to give these currently lost years back to the people in these busy and polluted parts of the world. Also, it cannot be ignored that air pollution affects the flora and fauna of our world. Aerolis could help alleviate this stress.
+            <br><br>
+            Apart from being a functional biofilter and a wonderful design, Aerolis could also become a cultural landmark in the city. Aerolis is designed to create a local oasis of clean air and is not capable to clean an entire city, but it can still be a stimulus to produce less pollution in the city by motivating people to keep the air clean, with the aid of for instance a fluorescence function, an intense green glow could indicate low pollution. In the end the people together with Aerolis would be capable of cleaning an entire city.
+            <br><br>
+            By visualizing the improved local air quality, Aerolis might also be a tool to create a more widespread awareness of the air pollution. In this manner, the visual reward of reducing air pollution might be a social incentive for people to reduce their air pollution footprint. Additionally, the cleaner image and the creation of a sense of community in these urban spaces might attract more citizens, as a solution to current vacancy problems in the cities. In the end, this could all lead to more attractive cities where people actually want to live. The motivation and sense of unity among the citizens can also create a healthier place for the frame of mind, which benefits again everyone, also the people outside the functional cleaning perimeter of Aerolis. The impact of the design would, as illustrated multiple times, in this way reach out farther than its purifying bubble.
+
+            <br><br>
+            Of course, the construction and maintenance of these “living” structures needs to be taken into account as well. Aerolis could be financed by the city council and the people living in it. In fact, in Flanders for large-scale building or renovation projects there is a fraction of the estimated budget that needs to be reserved for the integration of art. A large-scale functionalized Aerolis might prove to be an attractive alternative to meet these requirements and to integrate the biofilter structure into the city’s appearance. Aerolis is not just meant to be for one single person, it is a piece of art that is uniquely formed by its environment and this concept on its own must have the opportunity to be admired by the local people, citizens, tourists and the world.
+            <br><br>
+            In general, Aerolis can become very multifunctional, as outlined above, and aid towards a healthier life for people in polluted areas like cities, industrial zones, etc. In terms of ethics and culture it is easy to see where it fits in. It ensures healthy lives and wellbeing for everyone in the city, it helps revive the urban spaces where it is installed and makes it safer, more sustainable and creates a sense of unity among the people who live there. It could also fight the vacancy of buildings. It may even motivate and promote the whole world to get on the road to a more sustainable future. It helps to fight global problems such as air pollution and the related climate change, but potentially also water scarcity and many more. In the end Aerolis can benefit the life on land and indirectly it can ameliorate the life in the fresh water, seas and oceans.
+          </p>
+          
+          <div class="gifs">
+            <div class="cell_absolute">
+              <img src="./gif/c.gif" alt="">
+              
+            </div>
+          </div>
+            
+        </div>
+      
+        
+      </td> 
+    </tr>
+</table>
+
+<br>
+
+<div class="gifs">
+  <div class="cell_absolute">
+    <img src="./images high/5.jpg" alt="">
+    <div class="hidden-mobile">
+      <div class="project_text">frame 1356 00:45</div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="gifs">
+  <div class="cell_absolute">
+    <div class="embed-container"><iframe src="https://player.vimeo.com/video/274866530?h=b07895c913" frameBorder="0"></iframe></div>
+    
+  </div>
+</div>
+
+
+
+
+<table style="width:100%;  vertical-align: top;">
+    <tr>
+      <td style=" vertical-align: top; padding:0px 15px 15px 0px;" >
+        <div class="project_text" >
+          <p class="table_text_header">Risk</p><p>
+            As Aerolis is designed to perform as a biofilter, the microorganisms that would be active in the structure are a crucial element for the functionality of the design. Of course, when working with living organisms, considerations about safety and comfort have to been taken into account. Above all, the community present in the biofilter should be capable of degrading the polluting components present in city air. There are various options to create such a community: the natural community, present in an organic carrier material such as compost, a community inoculated with specialized organisms; on the other hand there is the choice between a microbial community, a fungal community or a mixed community.
+            <br><br>
+            Safety measures are mainly linked with the presence of these microorganisms in the structure. If the biofilter mechanism is inoculated with specialized microorganisms, this might lead to unpredictable outcomes. In a literature study on this subject, various organisms were compared with respect to their capacity of degrading airborne pollutants. But many of these are not safe to be used outside of specialized laboratories, as they are pathogens or allergen-producing species. Because Aerolis is an open structure where large volumes of air pass through, the organisms inside the structure can be spread to the surrounding environment. Therefore, it is essential to consider decent safety measures if it is inoculated with specialized organisms.
+            <br><br>
+            
+            
+            By adapting the specialized organisms genetically, a kill switch gene can be added to the microorganisms’s genome. This will lead to the production of specific toxins that kill off the individual and will be triggered by certain environmental conditions, e.g. when it is displaced from the biofilter structure. If this technique is effectively applied, the spread of modified organisms can be prevented. Another mechanism is modifying the specialized organisms to be an auxotroph. This implies the organism cannot produce specific organic compounds, e.g. a specific type of amino acid, that it needs to survive. Like this, by adding this compound to the filter medium, the organism can survive and function inside the unit but will no longer be able to grow outside of it as long as the specific compound is absent.
+            <br><br>
+            The presence of the growing organisms might lead to an unpleasant odour, mostly dependent on the type of material selected for biofiltration. As mentioned above, our team developed a biotin coating that can be altered with certain proteins in order to give the synthetic construction material of the Aerolis structure a specific functionality. This leads to the possibility of spreading certain aromatic components to counter the release of components that smell more unpleasant. Not only does this cover a possible uncomfortable smell, it also might be devised as such to release a stronger aroma in function of the cleanness of the purified air at a certain moment. This could be similar to the idea of installing fluorescent features or LED lights to reflect the on-line functioning of the biofilter: smell as another way for Aerolis to communicate with the people that are affected by it.
+            <br><br>
+            Aerolis is designed to fit in an urban environment. As a biofilter it cleans air from organic pollutants and fine particles, as a work of art it might form a part of the visual environment of the city. Later, information will be gathered about the public opinion on this design idea and also ideas and suggestions from the city council itself, to learn more about their opinion and possible obstacles that might get in the way of implementing Aerolis in an urban space.
+          </p>
+  
+        
+        
+       
+      </td>
+      
+    </tr>
+  </table>
+
+
+  <div class="gifs">
+    <div class="cell_absolute">
+      <img src="./images high/6.jpg" alt="">
+      <div class="hidden-mobile">
+        <div class="project_text">frame 603 00:20</div>
+      </div>
+    </div>
+  </div>
+ 
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sub-header"> © Joris Putteneers 2021</div>
+
+
+<div class="project_annotations">
+  <div class="project_mouse_annotations">
+    <input type="text" id="cursorX" >/<input type="text" id="cursorY" >
+  </div>
+  <div class="project_annotations_text">
+    current project: Aerolis
+    <br>
+    project collaborators:         
+    Prof. Marjan De Mey,
+    Prof. Wim Van Criekinge
+    <br>
+    Ir. Bram Ulrichts,
+    Ir. Arne Saldí,
+    Ir. Kylian Van Damme,
+    Ir. David Ysebaert
+    <br>
+    Dr. D. Bauwens,
+    Dr. L. Coussement,
+    Dr. B. De Paepe,
+    Dr. M. van Brempt
+    <br>
+    project year: 2018
+  </div>
+</div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+      content.style.maxHeight = null;
+      } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      }
+  });
+  }
+</script>
+
+</body>
+</html>

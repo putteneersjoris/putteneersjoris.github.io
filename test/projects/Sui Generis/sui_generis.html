@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+  window.onload = init;
+  function init() {
+      if (window.Event) {
+      document.captureEvents(Event.MOUSEMOVE);
+      }      document.onmousemove = getCursorXY;
+  }
+  
+  function getCursorXY(e) {
+      document.getElementById('cursorX').value = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+      document.getElementById('cursorY').value = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  }
+  </script>
+</head>
+<link rel="icon" type="image/png" href="../icon.png" sizes="32x32">
+<title>putteneersjoris.xyz</title>
+
+<body>
+
+
+<div class="project_container">
+  <div class="project_header">
+    <h2 >Sui Generis  (☢)</h2> 
+    
+  </div>
+
+  
+  
+  <div class="project_text">
+      <!-- <img class="project_image" src="test.gif"> -->
+      <p>        
+        Sui Generis aims to create an architecture that defies classification and reductionism. It try to explore unseen levels of resolution and topological complexity in architecture by developing compositional strategies based on a purely algorithmic processes. <br><br>
+        In the Sui Generis project, I use these algorithms to create a form that appears at once synthetic and organic. The design process strikes a delicate balance between the expected and the unexpected, between control and relinquishment. The algorithms are deterministic as they do not incorporate randomness, but the results are not necessarily entirely foreseeable. <br><br>
+        The resulting architecture does not lend itself to visual reductionism. Rather, the processes can devise truly surprising topographies and topologies that go beyond what one could have traditionally conceived. 
+        Sui Generis is between chaos and order, both natu-ral and artificial. Any references to nature or existing styles are not integrated into the design process, but are evoked only as associations in the eye of the beholder.   
+        
+       
+      </p>
+  </div>
+  
+<div class="project_back_link"> 
+  <a href="../projects.html"><<a>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+<div class="hidden-mobile">
+
+  <div class="gifs">
+    <div class="cell">
+        <img src="a.jpg" alt="">
+      <div class="project_text">shot_01</div>
+    </div>
+    <div class="cell">
+      <img src="b.jpg" alt="">
+      <div class="project_text">shot_01 detail</div>
+    </div>
+  </div>
+
+  <div class="break"></div>
+</div>
+
+<div class="visible-mobile">
+
+  <div class="gifs">
+    <div class="cell">
+        <img src="a_mobile.jpg" alt="">
+      <div class="project_text">shot_01</div>
+    </div>
+
+  </div>
+
+  <div class="break"></div>
+</div>
+
+
+
+
+<div class="project_text_black">Sui Generis details</div>
+<div class="gifs">
+  <div class="cell_no_padding">
+    <img src="2.jpg" alt="">
+    <div class="project_text_algorithm">1</div>
+  </div>
+  <div class="cell_no_padding">
+    <img src="3.jpg" alt="">
+    <div class="project_text_algorithm">2</div>
+  </div>
+  <div class="cell_no_padding">
+    <img src="4.jpg" alt="">
+    <div class="project_text_algorithm">3</div>
+  </div>
+  <div class="cell_no_padding">
+    <img src="5.jpg" alt="">
+    <div class="project_text_algorithm">4</div>
+  </div>
+  <div class="cell_no_padding">
+    <img src="6.jpg" alt="">
+    <div class="project_text_algorithm">5</div>
+  </div>
+</div>
+
+<div class="visible-mobile">
+  <div class="gifs">
+    <div class="cell_no_padding">
+      <img src="2_mobile.jpg" alt="">
+      
+    </div>
+    <div class="cell_no_padding">
+      <img src="4_mobile.jpg" alt="">
+      
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+<div class="gifs">
+  <div class="cell_absolute">
+    <div class="embed-container"><iframe src="https://www.youtube.com/embed/IgIfvnI68_k" frameBorder="0"></iframe></div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+<div class="sub-header"> © Joris Putteneers 2021</div>
+
+
+<div class="project_annotations">
+  <div class="project_mouse_annotations">
+    <input type="text" id="cursorX" >/<input type="text" id="cursorY" >
+  </div>
+  <div class="project_annotations_text">
+    current project: Sui Generis
+    <br>
+    project collaborators: Charles De Jonghe
+    <br>
+    project year: 2016
+  </div>
+</div>
+
+
+</body>
+</html>

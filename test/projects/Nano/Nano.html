@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+  window.onload = init;
+  function init() {
+      if (window.Event) {
+      document.captureEvents(Event.MOUSEMOVE);
+      }
+      document.onmousemove = getCursorXY;
+  }
+  
+  function getCursorXY(e) {
+      document.getElementById('cursorX').value = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+      document.getElementById('cursorY').value = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  }
+  </script>
+</head>
+<link rel="icon" type="image/png" href="../icon.png" sizes="32x32">
+<title>putteneersjoris.xyz</title>
+
+<body>
+
+
+<div class="project_container">
+  <div class="project_header">
+    <h2 >Nano  (∋)</h2> 
+    
+  </div>
+
+  
+  
+  <div class="project_text">
+      <!-- <img class="project_image" src="test.gif"> -->
+      <p> Humankind has developed a new form of construction. A synthetically programmed nano-seed is planted into the soil wich sprouts into an organism that  feeds upon the minerals in the soil and rock. Although the seed are exact copies of each other, the conditions vary with every location thus creating a new structure each time. Architecture as it is known in the present day lends itself to mass production of parts and materials, each with there own functions and construction methods. Sui Generis leaves this homogeneous design process behind and gradually varies its functionality by adapting to their hosts until it becomes a hybrid. This process allows the building of habitable structures on the Earth and on other planets in a dramatically cheap and ergonomic way.<br><br> Thanks to my instructor <a target ="_blank" href="https://cannaerts.cc/">  Corneel Cannaerts</a></p>
+  </div>
+  
+<div class="project_back_link"> 
+  <a href="../projects.html"><<a>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+
+<div class="hidden-mobile">
+  <div class="gifs">
+    <div class="cell">
+      <img src="a2_small.jpg" alt="">
+      <div class="project_text">Nano shot_01</div>
+    </div>
+    <div class="cell">
+      <img src="a3_small.jpg" alt="">
+      <div class="project_text">Nano shot_01 detail</div>
+    </div>
+  </div>
+</div>
+
+<div class="visible-mobile">
+  <div class="gifs">
+    <div class="cell">
+      <img src="1_big_mobile.jpg" alt="">
+      <div class="project_text">Nano shot_01</div>
+    </div>
+  </div>
+</div>
+
+<div class="break"></div>
+
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/xkI02PqhbBs" frameBorder="0"></iframe></div>
+
+<div class="break"></div>
+
+
+
+  <div class="gifs">
+    <div class="cell">
+      <img src="b1.jpg" alt="">
+      <div class="project_text">Nano shot_02</div>
+    </div>
+    <div class="cell">
+      <img src="b2.jpg" alt="">
+      <div class="project_text">Nano shot_02</div>
+    </div>
+  </div>
+
+
+<div class="break"></div>
+
+
+<div class="gifs">
+  <div class="cell">
+    <img src="c1.jpg" alt="">
+    <div class="project_text">shot_03 detail</div>
+  </div>
+  <div class="cell">
+    <img src="c2.jpg" alt="">
+    <div class="project_text">shot_04 detail</div>
+  </div>
+  <div class="cell">
+    <img src="c3.jpg" alt="">
+    <div class="project_text">shot_05 detail</div>
+  </div>
+  <div class="cell">
+    <img src="c4.jpg" alt="">
+    <div class="project_text">shot_06 detail</div>
+  </div>
+</div>
+
+
+<div class="break"></div>
+
+
+<div class="hidden-mobile">
+  <div class="gifs">
+    <div class="cell">
+      <img src="a1_small.jpg" alt="">
+      <div class="project_text">Nano shot_07</div>
+    </div>
+    <div class="cell">
+      <img src="a4_small.jpg" alt="">
+      <div class="project_text">Nano shot_07 detail</div>
+    </div>
+  </div>
+</div>
+
+<div class="visible-mobile">
+  <div class="gifs">
+    <div class="cell">
+      <img src="2_big_mobile.jpg" alt="">
+      <div class="project_text">Nano shot_07</div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+</div>
+
+<div class="sub-header"> © Joris Putteneers 2021</div>
+
+
+<div class="project_annotations">
+  <div class="project_mouse_annotations">
+    <input type="text" id="cursorX" >/<input type="text" id="cursorY" >
+  </div>
+  <div class="project_annotations_text">
+    current project: Nano
+    <br>
+    project collaborators: 
+    /
+    <br>
+    project year: 2015
+  </div>
+</div>
+
+
+</body>
+</html>

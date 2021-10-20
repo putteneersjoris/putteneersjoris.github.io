@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+:root{
+    
+	/* --headingfont:'Quicksand', sans-serif; */
+    
+    --headingfont: 'JetBrains Mono', monospace;
+	/* --font: 'PT Sans', sans-serif; */
+	--font:'JetBrains Mono', monospace;
+}
+
+body{
+	background-color: black;
+	/* padding: 10px; */
+}
+h2{
+	font-family: var(--font);
+	line-height: 2px;
+}
+/*cv.html cv-table layout*/
+#portfolio_table_body{
+	font-family: var(--font);
+	font-size: 1em;
+	margin: auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    max-width: 1000px;
+	padding: 20px;
+	background-color: rgb(0, 0, 0);
+    /* border: 2px white solid; */
+    text-align: left;
+    border-radius: 10px;
+	 /* box-shadow:
+	0 2.8px 2.2px rgba(255, 255, 255, 0.034),
+	0 6.7px 5.3px rgba(255, 255, 255, 0.048),
+	0 12.5px 10px rgba(255, 255, 255, 0.06),
+	0 22.3px 17.9px rgba(255, 255, 255, 0.072),
+	0 41.8px 33.4px rgba(255, 255, 255, 0.086),
+	0 100px 80px rgba(255, 255, 255, 0.12);    */
+	color: white;
+}
+
+#portfolio_td{
+	/* border: 1px solid rgb(255, 0, 0); */
+	border-collapse: collapse;
+	padding-right:10px;
+	color: white;
+    font-size: 1em;
+	
+}
+#portfolio_td_width{
+	/* border: 1px solid rgb(255, 0, 0); */
+	border-collapse: collapse;
+	padding-right:10px;
+	color: white;
+	padding-left: 85px;
+	/* background-color: purple; */
+	
+}
+.portfolio_background{
+	margin: 0px;
+	padding: 0px;
+	background-color: rgb(0, 0, 0);
+	color: white;
+	border-radius: 5px;
+	
+}
+#portfolio_td a{
+	color: rgb(0, 0, 0);
+	font-weight: bolder;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+}
+#portfolio_td a:hover{
+	
+	font-weight: bolder;
+	text-decoration: underline;
+	background-color: rgb(255, 255, 255);
+}
+
+#portfolio_outside_table{
+	border-collapse: collapse;
+	margin: 30px;
+	font-size: 16px;
+}
+
+.collapsible {
+
+    margin: 0px;
+    padding: 0px;
+
+	color:rgb(255, 255, 255);
+	background-color: rgba(255, 0, 0, 0);
+	/* text-decoration: underline; */
+	font-family: var(--font);
+	cursor: pointer;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	text-align: left;
+	font-weight: 400;
+	position: relative;
+    
+	/* line-height: 0px; */
+	
+}
+
+.active, .collapsible:hover {
+	font-weight: bold;
+    text-decoration: underline;
+}
+
+.content {
+	color: rgb(255, 255, 255);
+	position: relative;
+	padding: 0 30px;
+	max-height: 0;
+	left: 25px;
+	overflow: hidden;
+	transition: max-height 0.1s ease-out;
+    
+}
+.content a:visited{
+	color:blue;
+}
+.portfolio_symbols{
+	float: right;
+	position: relative;
+}
+.portfolio_title{
+	font-family:  var(--headingfont);
+	margin-top: 0px;
+	font-size: 40px;
+	margin-bottom: 0px;
+    font-size: 500;
+}
+
+
+
+.bar{
+	height: 6px;
+	background-color: rgb(255, 255, 255);
+	
+}
+
+
+.sub-header{
+    color: rgba(255, 255, 255, 0.5);       
+    float: right;
+    z-index: 1;  
+    right:0px;
+    bottom:10px;
+    font-style: italic; 
+    position: absolute;
+    opacity: 1;
+    margin-right: 5%;
+    font-size: 0.75em;
+	position: fixed;
+    
+}
+.project_back_link a{
+        position: fixed;
+        margin: 0px;
+        padding: 0px;
+        left: 40px;
+        top: 82px;
+        font-size: 2em;
+        color: white;
+        font-family: var(--font);
+        text-decoration: none;
+        opacity: 1;
+        font-weight: 400;
+        
+    }
+    .project_back_link a:hover{
+        
+        background-image: url(../1.gif);
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 800;  
+    }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgb(0, 0, 0); 
+            border-radius: 10px;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(70, 70, 70); 
+            ;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffffff; 
+        }
+
+
+
+@media all and  (max-width: 1300px) {
+    .project_back_link a{
+    opacity: 0;
+}
+
+}
+</style>
+<link rel="icon" type="image/png" href="../projects/icon.png" sizes="32x32">
+<title>putteneersjoris.xyz</title>
+
+</head>
+
+<body >
+
+    <div class="project_back_link"> 
+        <a href="https://google.com"><<a>
+      </div>
+
+
+<div id="portfolio_table_body">
+    <div class="portfolio_background">
+    <table id="portfolio_outside_table">
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td">
+               <h1 class="portfolio_title">Joris Putteneers</h1> <div class="bar"></div>
+            <br><br>
+        </td> 
+            
+        </tr>
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><h2>// Personal Profile:</h2></td> 
+        </tr>
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td">
+                My name is Joris Putteneers, I consider myself a speculative architect, blurring the boundaries
+                between fiction and nonfiction architecture. Mapping the post-Anthropocene through a
+                nonhuman ontology. 
+                <br>
+                I’m currently a senior teaching fellow at the Bartlett School of Architecture.
+                I’m also actively working in my own practice since 2017, which specializes in:
+                <br>
+                <br>  
+                Data driven &amp; Computational design | 
+                VR/AR technology and implementation | 
+                Digital fabrication | 
+                Concept design &amp; Art direction | 
+                Visualization
+                 
+                <br><br> 
+                get in touch at
+                 <a  href="">putteneersjoris@gmail.com </a>  
+                
+                <br><br>
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><h2>// Education</h2></td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2021</td>
+            <td id="portfolio_td">Master of Architecture @KULeuven (Cum Laude)</td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td">Bachelor of Architecture @KULeuven</td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2013</td>
+            <td id="portfolio_td">Architecturale Vorming @ Heilig Graf Turnhout</td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2011</td>
+            <td id="portfolio_td">Electro mechanics @Vrij Technisch Instituut</td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2008</td>
+            <td id="portfolio_td">Electro techniques @Vrij Technisch Instituut</td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2007</td>
+            <td id="portfolio_td">Industrial Sciences @Vrij Technisch Instituut</td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2006    </td>
+            <td id="portfolio_td">Metal and woodworking @Vrij Technisch Instituut</td> 
+        </tr>
+
+
+        <tr>
+            <td id="portfolio_td">2005</td>
+            <td id="portfolio_td">General education @Maris Stella institute Westmalle</td> 
+        </tr> 
+       
+        
+        
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><h2><br><br><br><br><br><br><br><br><br><br>// Teaching experience</h2></td> 
+        </tr>
+
+
+        <tr>
+            <td id="portfolio_td">2021</td>
+            <td id="portfolio_td"> <div class="portfolio_symbols">☉</div> 
+                <button type="button" class="collapsible"> Bpro RC1, RC19 &amp; RC20 (Bartlett School of Architecture. UK)</button>
+            
+            <div class="content">
+                // Teaching the Bpro architectural design cluster RC1 (Cli-Migration), and urban design clusters:
+                RC19 &amp; RC20 (Autonomous Ecologies) at The Bartlett School of Architecture (UK) together
+                with Deborah Lopez and Hadin Charbel (RC1, RC20) &amp; Corneel Cannaerts and Michiel Heilbig
+                  (RC19).
+                  
+
+                  
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2021</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">╪</div>  
+                <button type="button" class="collapsible"> Misfits Workshop (The University of Tennessee - Knoxville. US)</button>
+            
+            <div class="content">
+                // A technical workshop exploring Houdini, Python and Vex to produce architectural prototypes.
+                
+            </div>
+
+            </td> 
+        </tr>
+
+
+        <tr>
+            <td id="portfolio_td">2020</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">├</div> 
+                <button type="button" class="collapsible"> 317 Artificial intelligence (Texas A&amp;M. US)</button>
+            
+            <div class="content">
+                // A practical course on implementing artificial intelligence in an architectural context. The
+                Course was given together with Gabriel Esquivel, Mehdi Farahbakhsh and Shane Bugni.
+                
+            </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2019</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">┘</div>  
+                <button type="button" class="collapsible"> Workshop Bartlett UCL (Bartlett School of Architecture. UK)</button>
+            
+            <div class="content">
+                // Workshop tackling how we can create architectural systems relating to contemporary
+                urgencies and domains, connected to a post-singularity and post-anthropogenic ecology.
+                <a href = "https://www.behance.net/gallery/86757571/Autonomous-Agencies" target = "_blank">projects</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2019</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">╬</div>  
+                <button type="button" class="collapsible">Workshop Autonomous Agencies, DesignMorphine (TU Wien. AU)</button>
+            
+            <div class="content">
+                // Workshop focused on creating a speculative narrative without human agency. Co-taught with
+                Vamsi Krishna Vemuri.
+                <a href = "https://fb.watch/4QjNQGsP9h/" target = "_blank">promo video</a> , 
+                 <a href = "https://www.facebook.com/PutteneersJoris/posts/final-jury-designmorphine-workshopparticipating-studentsjulian-edelmann-konstant/2553997141289268/" target = "_blank"> jury pictures </a>
+                 
+                </div>
+
+            </td> 
+        </tr>
+        
+        <tr>
+            <td id="portfolio_td">2019</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">╥|||||||||||||||||||||||||||||||||||||</div>  
+                <button type="button" class="collapsible">T4T lab 2019 (Texas A&amp;M. US)</button>
+            
+            <div class="content">
+                // The project’s objective was to direct the students towards the values of focused
+                experimentation by manipulating tools and pipelines to their advantage, deriving an
+                architectural prototype without limitation and classification. The studio was co-taught with
+                Gabriel Esquivel.
+                <a href = "https://www.t4tlab.com/copy-of-t4t-lab-2018" target = "_blank">course description</a> , 
+                <a href = "https://putteneersjoris.github.io/content/student%20work.html" target = "_blank">projects</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2016</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">₯</div>  
+                <button type="button" class="collapsible">Blender workshop in Antwerp (BEL)</button>
+            
+            <div class="content">
+                // Blender crash course, making exterior and interior architectural scenes.
+              </div>
+
+            </td> 
+        </tr>
+
+    
+
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><h2><br><br><br><br><br><br><br><br><br><br>// Articles / Publications / Interviews</h2></td> 
+        </tr>
+
+
+        <tr>
+            <td id="portfolio_td">2018</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">♚</div>  
+                <button type="button" class="collapsible">Interview D2 Inspiration Series.</button>
+            
+            <div class="content">
+                // Interview with Fabio Palvelli, organizer of the D2 conference in Vienna.
+                The interview was part of a bigger series, covering interviews with Mike Winkelmann (Beeple),
+                Chris Do (TheFutur), Allan McKay (VFX supervisor), Edon Guraziu (concept artist) and Joris
+                Putteneers (Architect)
+                <a href = "https://www.youtube.com/watch?v=ogsCtNrtPIM&amp;ab_channel=D2Conferences" target = "_blank">D2 video</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+
+        <tr>
+            <td id="portfolio_td">2018</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">🔴</div>  
+                <button type="button" class="collapsible">Interview VTM.</button>
+            
+            <div class="content">
+                // An interview on the national news where me and my colleagues explained the functionality of
+                a data driven air filtration system in an urban environment.
+                <a href = "https://www.youtube.com/watch?v=8xkxCP3EWRY&amp;feature=youtu.be" target = "_blank">VTM video</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">👌</div>  
+                <button type="button" class="collapsible">Interview CGarchitect.</button>
+            
+            <div class="content">
+                //Jeff Mottle, owner of CGarchitect, contacted me to collaborate on an Interview. I was also
+                pointed out as a jury member of the CGarchitect awards 2018.
+                <a href = "http://www.cgarchitect.com/2017/07/interview-joris-putteneers" target = "_blank">interview</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">₰</div>  
+                <button type="button" class="collapsible">Interview Unbuilt.</button>
+            
+            <div class="content">
+                // Interview on how I approach my procedural architectural work.
+                <a href = "https://medium.com/@Modelo/unbuilt-synesthesia-by-joris-putteneers-3dcd2d596b04" target = "_blank">interview</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><h2><br><br><br><br><br><br><br><br><br><br>// Exhibitions / Conferences / Lectures</h2></td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2021</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">☀</div>  
+                <button type="button" class="collapsible">Venice Biennale</button>
+            
+            <div class="content">
+                // Exhibitioning a portion of my work at cityX venice Biennale.
+
+                <a href = "https://cityxvenice.org/16?fbclid=IwAR2GD9_up5t6IsD4LYCx2HsfOa6WyMTm7-afo3Aph3WuY5mjeivwb8VyJGo" target = "_blank">hyperlink</a>, 
+                <a href = "https://cityxvenice.org/ivp" target = "_blank">participants</a>,
+                <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/venice%20biennale/venice_biennale_a.png?raw=true" target = "_blank">picture</a>
+                  
+            </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2020</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">♥</div>  
+                <button type="button" class="collapsible">Lecture @Austin School of Architecture.</button>
+            <div class="content">
+                // Presenting my work on speculative architecture.
+                <a href = "https://www.facebook.com/photo?fbid=10158458636801145&set=a.10152407560681145" target = "_blank">picture</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2020</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">🇳</div>  
+                <button type="button" class="collapsible">Speaker D2 Conference Vienna</button>
+            <div class="content">
+                // presentation on the benefits of virtual reality based tools in a workflow for storyboarding and
+                art direction.
+                <a href = "https://www.youtube.com/watch?v=0SyuOgaNGdw&amp;t=15s&amp;ab_channel=D2Conferences" target = "_blank">presentation</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2019</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">✈</div>  
+                <button type="button" class="collapsible">Texas A&M Lecture Business strategy (US)</button>
+            <div class="content">
+                // I was invited to share my experiences on how I tackled some of the challenges of starting a
+                business.
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2018</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">₵</div>  
+                <button type="button" class="collapsible">Supernova Conference Antwerp (BEL).</button>
+            <div class="content">
+                // I was invited to show my short film E|A|S in Antwerp. It was presented By Dr.Angelo
+                Vermeulen who is a researcher at TU Delft. Supernova is a conference that promotes the use
+                of new technology by creative thinkers and designers
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2018</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">≲</div>  
+                <button type="button" class="collapsible">Exhibition London Design Festival (UK).</button>
+            <div class="content">
+                //A ten-day festival that celebrated the convolution of biology, technology and design in which
+                me and my collaborators had the opportunity to exhibit.
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        
+        <tr>
+            <td id="portfolio_td">2018</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">☺</div>  
+                <button type="button" class="collapsible">Exhibition Bredaphoto (NL).</button>
+            <div class="content">
+                //Together with Angelo Vermeulen, the DSTART team, and TU Delft university, we created a
+                speculative long-distance spacecraft. By infecting very specific asteroids with a cluster of
+                modules, we could harvest the asteroid’s resources and re-use them for the creation of more
+                modules which would hold a plant-based ecosystem. I was responsible for the creation of the
+                evolutionary algorithm, as well as the visualisation. There are plans to invest in a miniature
+                module that will be placed in outer space for further prototyping.
+                <a href = "https://www.behance.net/gallery/70024755/EAS" target = "_blank">pictures</a> , 
+                <a href = "https://www.youtube.com/watch?v=rAZBYxPfa_0" target = "_blank">video</a> , 
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/bredaphoto/exhibition.jpg" target = "_blank">exhibition</a>
+                
+            </div>
+
+            </td> 
+        </tr>
+    
+        <tr>
+            <td id="portfolio_td">2018</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">☞</div>  
+                <button type="button" class="collapsible">Exhibition Parsons School of Design (US).</button>
+            <div class="content">
+                //interactive experience exhibiting a VR/AR environment of the Aerolis project.
+                
+              </div>
+
+            </td> 
+        </tr>
+        
+        <tr>
+            <td id="portfolio_td">2018</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">↺</div>  
+                <button type="button" class="collapsible">Finalist New York Biodesign challenge (US).</button>
+            <div class="content">
+                // Together with five bio-engineers, 4 PhD students and 2 professors, we created Aerolis, a data
+                driven air filtration system. It was my task to measure/harvest wind velocity information and
+                create a system which filters air of bad pollutants. We also produced a scale model with biotin-
+                streptavidin infused polylactide (PLA) to functionalize the structure.
+                <a href = "http://aerolis.be/" target = "_blank">website</a> , 
+                <a href = "https://www.behance.net/gallery/63500963/Aerolis" target = "_blank">pictures</a> , 
+                <a href = "https://vimeo.com/274866530" target = "_blank">video_technical</a> , 
+                <a href = "https://vimeo.com/261007853" target = "_blank">video</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+        
+
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">♔</div>  
+                <button type="button" class="collapsible">London sketchbook festival (UK).</button>
+            <div class="content">
+                // An exhibition of a selection of my work, accompanied with a 15-minute presentation about the
+                importance of digital tools as a creative extension in the field of architecture and design.
+                Presented alongside the works of Jama Jurabaev and Steven Cormann.
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">☐</div>  
+                <button type="button" class="collapsible">Dodenaus film festival Mechelen (BEL).</button>
+            <div class="content">
+                // Presentation of the short film “Coda” that was created for the 500th anniversary of Rembert
+                Dodoens, A Flemish botanist and scientist. The film was projected on the exterior of the Sint-
+                Rombouts cathedral (Mechelen, Belgium) as well as on the interior of the dome.
+                <a href = "https://vimeo.com/239624912" target = "_blank">video</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+        
+
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">🐑</div>  
+                <button type="button" class="collapsible">Renovation “Het Steen” (BEL).</button>
+            <div class="content">
+                // A collaborative process between the city of Antwerp, Soulmade and noArchitecten in which
+                we proposed a renovation of a castle heritage. I created a series of visualisations,
+                representations and interactive AR/VR applications of the different stages of the restoration.
+                The installation took place in a building that we renovated.
+                <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steena.jpg?raw=true" target = "_blank">picture_1</a>
+                <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steenb.jpg?raw=true" target = "_blank">picture_2</a>
+                <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steenc.jpg?raw=true" target = "_blank">picture_3</a>
+                <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steenc.jpg?raw=true" target = "_blank">picture_4</a>
+                <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steene.jpg?raw=true" target = "_blank">picture_5</a>
+                <a href = "https://github.com/putteneersjoris/putteneersjoris.github.io/blob/master/content/projects/steen/steenf.jpg?raw=true" target = "_blank">picture_6</a>
+                
+            </div>
+
+            </td> 
+        </tr>
+        
+
+        <tr>
+            <td id="portfolio_td">2016</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">⊙</div>  
+                <button type="button" class="collapsible">Nebraska Art private exhibition (US).</button>
+            <div class="content">
+                //A small exhibition of my early work which explored the process of glitching architectural
+                objects.
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        
+
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><h2><br><br><br><br><br><br><br><br><br><br>// Passion projects</h2></td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2020</td>
+            <td id="portfolio_td"><div class="portfolio_symbols"> ⃣</div>  
+                <button type="button" class="collapsible">Ugly, Stupid, Honest</button>
+            <div class="content">
+                // An inquiry of machine poetics.
+                <a href = "https://www.behance.net/gallery/117377937/An-inquiry-of-machine-poetics" target = "_blank">video, images & description</a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2020</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">☠</div>  
+                <button type="button" class="collapsible">hyper chunk</button>
+            <div class="content">
+                // A reconfiguration of the facade as a platform for monitizing ad-space. Inspired by a flowershop in Turnhout who decided to 
+                        close its doors after it turned out that, renting out its facade as ad-space, was more profitable than maintaining the shop.
+                        <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/double%20look/double_look_a.jpg" target = "_blank">image_1 </a> , 
+                        <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/double%20look/double_look_b.jpg" target = "_blank">image_2 </a> , 
+                        <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/double%20look/double_look_c.jpg" target = "_blank">physical chunk </a>
+                        
+              </div>
+
+            </td> 
+        </tr>
+
+        <tr>
+            <td id="portfolio_td">2018</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">😡</div>  
+                <button type="button" class="collapsible">Copepod</button>
+            <div class="content">
+                // Experimenting with a real time Gravity sketch and Blender based production workflow in
+                Eevee.
+                <a href = "https://www.behance.net/gallery/73040913/Copepod" target = "_blank">copepod media</a> , 
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepoda.jpg" target = "_blank"> 1 </a> , 
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodb.jpg" target = "_blank"> 2 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodc.jpg" target = "_blank"> 3 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodd.jpg" target = "_blank"> 4 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepode.jpg" target = "_blank"> 5 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodf.jpg" target = "_blank"> 6 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodg.jpg" target = "_blank"> 7 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodh.jpg" target = "_blank"> 8 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodi.jpg" target = "_blank"> 9 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodj.jpg" target = "_blank"> 10 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodk.jpg" target = "_blank"> 11 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodl.jpg" target = "_blank"> 12 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodm.jpg" target = "_blank"> 13 </a> ,
+                <a href = "https://raw.githubusercontent.com/putteneersjoris/putteneersjoris.github.io/master/content/projects/copepod/copepodo.jpg" target = "_blank"> 14 </a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+            
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">▲</div>  
+                <button type="button" class="collapsible">Skizoid</button>
+            <div class="content">
+                // The Idea of intersecting boundaries between algorithmic and traditional design approaches. A
+                conversation between hard and soft, digital and physical, expected and unexpected.
+                <br> <a href = "https://vimeo.com/218686019" target = "_blank">video_1 </a> , 
+                <a href = "https://vimeo.com/218712558" target = "_blank">video_2 </a> , 
+                <a href = "https://www.behance.net/gallery/51966141/Sui_generis_05" target = "_blank">video_3 </a> , 
+                <a href = "https://vimeo.com/250414185" target = "_blank">video_4 </a>
+                
+              </div>
+
+            </td> 
+        </tr>
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">🗣</div>  
+                <button type="button" class="collapsible">LA dithering</button>
+            <div class="content">
+                // in progress
+                
+                
+              </div>
+
+            </td> 
+        </tr>
+        <tr>
+            <td id="portfolio_td">2017</td>
+            <td id="portfolio_td"><div class="portfolio_symbols">☢</div>  
+                <button type="button" class="collapsible">Synesthesia</button>
+            <div class="content">
+                // The development of an algorithmic system that creates spaces depending on the input
+                protocol. As it is voxel based instead of primitive based, structures are created which could
+                have not been achieved traditionally.
+                <a href = "https://vimeo.com/269765936?from=outro-embed" target = "_blank">video_1</a> , 
+                <a href = "https://www.behance.net/gallery/49348641/Sui_generis_03" target = "_blank">media_1 </a> , 
+                <a href = "https://www.behance.net/gallery/50451659/Sui-_generis_04" target = "_blank">media_2 </a>
+                
+              </div>
+
+            </td> 
+        </tr>
+
+
+       
+        
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><h2><br><br><br><br><br><br><br><br><br><br>// Software Skills </h2></td> 
+        </tr>
+        
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><div class="portfolio_symbols"></div>  
+                <button type="button" class="collapsible">SideFX Houdini, </button>
+            <div class="content">
+                I use <a href = "https://www.sidefx.com/" target = "_blank">SideFX Houdini </a>for procedural and non-procedural work and the generation of synthetic datasets. 
+            Houdini has been my main driver for 6 years. When working with geometric models, I mainly output renders from the native houdini renderengines Karma or Mantra. 
+            <br>My Houdini expertise extends to SOP (surface operators), VOP (vector operators), LOP (lighting operators), PDG (procedural dependency graph), CHOP (channel operators) & COP (composite operators) contexts. 
+            I use vex (based on C++) or python as a way of optimizing and automating node structures and to express computational Logic inside the Houdini Framework.
+            
+              </div>
+
+            </td> 
+        </tr>
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><div class="portfolio_symbols"></div>  
+                <button type="button" class="collapsible">blender,
+                    </button>
+            <div class="content">
+                I use <a href = "https://www.blender.org/" target = "blank">Blender</a> for visualisation, world building, art direction and prototyping. It is a fast, intuitive and versatile mesh based modeling software that allows me to rapidly sketch possible outcomes of projects.
+                
+            </div>
+
+            </td> 
+        </tr>
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><div class="portfolio_symbols"></div>  
+                <button type="button" class="collapsible">python,</button>
+            <div class="content">
+                version control, workflow and automatisation: python, linux ubuntu, git, bash.
+                <br>html, css, java, javascript, open shading language 
+                <br>familiar with renderengines: fstorm, cycles, eevee, mantra, karma, octane
+                <br>English (fluent), Dutch (native), French (basic)
+                <br>good communicative skills.
+                <br>My experience as a teacher taught me how to articulate and formulate complex topics in ways that are easily understood. 
+                
+              </div>
+
+            </td> 
+        </tr>
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><div class="portfolio_symbols"></div>  
+                <button type="button" class="collapsible">photoshop</button>
+            <div class="content">
+                version control, workflow and automatisation: python, linux ubuntu, git, bash.
+                <br>html, css, java, javascript, open shading language 
+                <br>familiar with renderengines: fstorm, cycles, eevee, mantra, karma, octane
+                <br>English (fluent), Dutch (native), French (basic)
+                <br>good communicative skills.
+                <br>My experience as a teacher taught me how to articulate and formulate complex topics in ways that are easily understood. 
+                
+              </div>
+
+            </td> 
+        </tr>
+        
+        
+        <tr>
+            <td id="portfolio_td"></td>
+            <td id="portfolio_td"><div class="portfolio_symbols"></div>  
+                <button type="button" class="collapsible">other skills</button>
+            <div class="content">
+                version control, workflow and automatisation: python, linux ubuntu, git, bash.
+                <br>html, css, java, javascript, open shading language 
+                <br>familiar with renderengines: fstorm, cycles, eevee, mantra, karma, octane
+                <br>English (fluent), Dutch (native), French (basic)
+                <br>good communicative skills.
+                <br>My experience as a teacher taught me how to articulate and formulate complex topics in ways that are easily understood. 
+                
+              </div>
+
+            </td> 
+        </tr>
+
+        </td> 
+    </tr>
+
+    <tr>
+        <td id="portfolio_td"></td>
+        <td id="portfolio_td"><h2><br><br><br><br><br><br><br><br><br><br>// Other experience</h2></td> 
+    </tr>
+
+    <tr>
+        <td id="portfolio_td">2017</td>
+        <td id="portfolio_td"><div class="portfolio_symbols">ᾧ</div>  
+            <button type="button" class="collapsible">part of multiple studio reviews</button>
+        <div class="content">
+            @Texas A&M school of Architecture, 
+            @University of Pennsylvania, 
+            @Bartlett UCL, 
+            @University of Tennessee, 
+            @The University of Texas at Austin
+            @TU Wien Faculty of Architecture and Planning
+            @Faculty of Architecture KU Leuven
+            
+          </div>
+
+        </td> 
+    </tr>
+    <tr>
+        <td id="portfolio_td">2017</td>
+        <td id="portfolio_td"><div class="portfolio_symbols">♫</div>  
+            <button type="button" class="collapsible">Part of SEAD network: Space Ecologies Art and Design</button>
+        <div class="content">
+            Part of SEAD network: Space Ecologies Art and Design
+            
+          </div>
+
+        </td> 
+    </tr>
+    
+    <tr>
+        <td id="portfolio_td">2017</td>
+        <td id="portfolio_td"><div class="portfolio_symbols">≫</div>  
+            <button type="button" class="collapsible">Start of my own studio: Joris Putteneers Architecture</button>
+        <div class="content">
+            Start of my own studio: Joris Putteneers Architecture
+            
+          </div>
+
+        </td> 
+    </tr>
+
+    <tr>
+        <td id="portfolio_td">2013</td>
+        <td id="portfolio_td"><div class="portfolio_symbols">Ἃ</div>  
+            <button type="button" class="collapsible">Certificate Business management</button>
+        <div class="content">
+            Certificate Business management
+            
+          </div>
+
+        </td> 
+    </tr>
+
+
+    <tr>
+        <td id="portfolio_td">2011</td>
+        <td id="portfolio_td">Adobe certificate</td> 
+    </tr>
+    
+    <tr>
+        <td id="portfolio_td"></td>
+        <td id="portfolio_td"><h2><br><br><br><br><br><br><br><br><br><br>// Interests</h2></td> 
+    </tr>
+    <tr>
+        <td id="portfolio_td"></td>
+        <td id="portfolio_td"><u>everything computer graphics related</u> (trigonometry, linear algebra + machine learning, applied mathematics, artificial intelligence,  programming shaders, data science, ...)
+            <br><u>architecture theory & philosophy</u> (Mario Carpo, Jose Sanchez, Timothy Morton, everything from AD Magazine, ... )
+            <br><u>mountainbiking</u>
+            
+        </td> 
+    </tr>
+    <tr>
+        <td id="portfolio_td"></td>
+        <td id="portfolio_td"><h2><br><br><br><br><br><br><br><br><br><br>// Contact:</h2></td> 
+    </tr>
+
+    <tr>
+        <td id="portfolio_td_width"> <a></a></td>
+        <td id="portfolio_td"><a href="#">putteneersjoris@gmail.com</a> | 
+            <a href = "https://www.behance.net/jorisputteneers" target = "_blank">behance</a> | 
+            <a href = "http://jorisputteneers.tumblr.com/" target = "_blank">old_website</a> |
+            <a href = "https://www.linkedin.com/in/joris-putteneers-8b828b91/" target = "_blank">linkedin</a> | 
+            <a href = "https://github.com/putteneersjoris" target = "_blank">github</a></td>  
+    </tr>
+
+</div>
+</table>
+</div>
+</div>
+
+
+<div class="sub-header"> © Joris Putteneers 2021</div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+    }
+
+
+</script>
+
+</body>
+
+</html>

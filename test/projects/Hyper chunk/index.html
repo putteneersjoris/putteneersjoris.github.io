@@ -1,0 +1,205 @@
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	    <link rel="stylesheet" href="style.css" type="text/css">
+	    <link rel="icon" href="favico.gif" type="image/x-icon"> 
+		<link rel="shortcut icon" href="1_colored" type="image/x-icon">
+	    <script src="js/leaflet.js" type="text/javascript"></script>
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	    <title>Hyper chunk</title>
+	    <meta charset="utf-8">
+	</head>
+	
+	<body>
+
+		
+		
+		<div class="project_back_link"> 
+			<a href="../projects.html"><<a>
+		  </div>
+
+			
+
+	    <div id="map">&nbsp;</div>
+	
+	    <div id="layerz" title="press [SPACE]" ></div>
+
+
+		<div class="project_annotations">
+			<div class="project_mouse_annotations">
+			  <input type="text" id="cursorX" >/<input type="text" id="cursorY" >
+			</div>
+			<div class="project_annotations_text">
+			  current project: Hyper chunk
+			  <br>
+			  project collaborators:         
+			  Thank you <a href="https://cannaerts.cc/">Corneel Cannaerts</a>  for the map tiler.
+			  <br>
+			  made with <a href="https://leafletjs.com/">Leaflet.js</a> 
+			  
+			  <br>
+			  project year: 2019
+			</div>
+		  </div>
+
+
+			<button id="photo_viewer" onclick="myFunction()">
+				[◉"]
+			</button>
+			
+			<div id="myDIV">
+				<div id="picture">
+					<img src="pic_low.jpg">
+				</div>
+			</div>
+
+			<script>
+				function myFunction() {
+				var x = document.getElementById("myDIV");
+				if (x.style.display === "block") {
+				x.style.display = "none";
+				} else {
+				x.style.display = "block";
+				}
+			}
+			</script>
+
+
+
+		  <script type="text/javascript">
+			window.onload = init;
+			function init() {
+				if (window.Event) {
+				document.captureEvents(Event.MOUSEMOVE);
+				}
+				document.onmousemove = getCursorXY;
+			}
+			
+			function getCursorXY(e) {
+				document.getElementById('cursorX').value = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+				document.getElementById('cursorY').value = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+			}
+			</script>
+	    
+	    <script type="text/javascript">
+	        
+	            ////////// SETUP
+	            mapLink = 'maps/{id}/{z}/{x}/{y}.gif';
+	
+	            var layer  = L.tileLayer(mapLink, {id: 'layer', noWrap: true}), 
+					layer2  = L.tileLayer(mapLink, {id: 'layer2', noWrap: true}), 
+					layer3  = L.tileLayer(mapLink, {id: 'layer3', noWrap: true}), 
+					layer4  = L.tileLayer(mapLink, {id: 'layer4', noWrap: true}); 
+	
+	            var map = L.map('map', {center: [-48.8, -1.4], zoom: 1, minZoom: 1, maxZoom: 5}).addLayer(layer);
+	
+	            var baseLayers = {"layer": layer, "layer2": layer2, "layer3": layer3,"layer4": layer4};
+	            
+	            var markerArray = [];
+	            var projArray = [];
+	            
+	            var projectIcon = L.icon({
+	            	iconUrl: 'js/images/info.png',
+	            	iconRetinaUrl: 'js/images/info.png',
+	            	iconSize:     [23, 23],
+				    iconAnchor:   [11, 23],
+				    popupAnchor:  [1, -23]
+	            	});
+	            	
+	            var regIcon = L.icon({
+	            	iconUrl: 'js/images/marker-icon.png',
+	            	iconRetinaUrl: 'js/images/marker-icon-2x.png',
+	            	iconSize:     [25, 42],
+				    iconAnchor:   [13, 42],
+				    popupAnchor:  [1, 0]
+	            	});
+	            	           
+	            var southWest = map.unproject([0, 8192], map.getMaxZoom());
+	            var northEast = map.unproject([8192, 0], map.getMaxZoom());
+	            map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
+
+				///////// LAYERZ CONTROL
+	            //CYCLE THRU THEM LAYAZ
+	            var cycle = 0;
+	            
+	            var cycling = function() {
+	            	if (cycle < 3) {cycle++} else {cycle = 0};
+	                    
+	                if (cycle == 0) {
+	                    map.addLayer(layer);
+	                    map.removeLayer(layer4);
+	                    $('#layerz').css('background', 'url("img/Z000b.png") no-repeat center center #fff');
+						$('#layerz').css('background-color', '#0000');
+	                }
+	                
+	                if (cycle == 1) {
+	                    map.removeLayer(layer);
+	                    map.addLayer(layer2);
+	                    $('#layerz').css('background','url("img/Z001b.png") no-repeat center center #fff');
+						$('#layerz').css('background-color', '#0000');
+	                }
+	                
+					if (cycle == 2) {
+	                    map.removeLayer(layer2);
+	                    map.addLayer(layer3);
+	                    $('#layerz').css('background','url("img/Z002b.png") no-repeat center center #fff');
+						$('#layerz').css('background-color', '#0000');
+	                }
+					if (cycle == 3) {
+	                    map.removeLayer(layer3);
+	                    map.addLayer(layer4);
+	                    $('#layerz').css('background','url("img/Z003b.png") no-repeat center center #fff');
+						$('#layerz').css('background-color', '#0000');
+	                }
+	 
+	            }; 
+	            
+	            
+	            //BUTTON CYCLE
+	            $('#layerz').click(function() {cycling();});
+	            
+	            //KEYBOARD SWITCH
+	            document.onkeydown = function(e) {
+							e = e || event
+							
+							switch(e.keyCode) {
+								
+								//1
+								case 49:  
+								cycle = 0;
+								map.addLayer(Z000);
+		                        map.removeLayer(Z001);
+		                        map.removeLayer(Z002);
+		                        map.removeLayer(placezCouch1);
+		                        map.removeLayer(placezCouch2);
+		                        if (map.getZoom() > 1) {map.addLayer(placezCouch0);}
+		                        $('#layerz').css('background', 'url("img/Z000.png") no-repeat center center #fff');
+								return false
+								
+								//2
+								case 50:  
+								cycle = 1;
+								map.removeLayer(Z000);
+		                        map.removeLayer(Z002);
+		                        map.removeLayer(placezCouch0);
+		                        map.removeLayer(placezCouch2);
+		                        map.addLayer(Z001);
+		                        if (map.getZoom() > 1) {map.addLayer(placezCouch1)}
+		                        $('#layerz').css('background','url("img/Z001.png") no-repeat center center #fff');
+								return false
+								
+								
+								//key pressed = SPACE
+								case 32:  
+								cycling();
+								return false
+							}
+						};
+	            
+	
+
+	    </script>
+	</body>
+</html>

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;800&display=swap');
+:root{
+/* --headingfont:'Quicksand', sans-serif;
+--font: 'PT Sans', sans-serif; */
+
+--headingfont: 'JetBrains Mono', monospace;
+--font:'JetBrains Mono', monospace;
+}
+
+.scrolldontzoom{
+margin: 0px;
+pad: 0px;
+}
+
+.text, th{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    text-align: left;
+    font-family: var(--font);
+    font-size: 15px;
+    transform:translate(-30px, -20px);
+    
+    opacity: 0.25; 
+    background-color: white;
+    transition: 50000s ease;
+    z-index: 1;
+    border-collapse: collapse; 
+    color: black; 
+    
+    
+}
+
+.text:hover{
+    opacity: 1;
+    transition: 0.1s ease;
+    filter: invert(100%);
+    font-weight: bold;
+}
+
+.instructions_text{
+    position: absolute;
+    z-index: 2;  
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    line-height: 1em;
+    font-family: var(--headingfont);
+    border: 3px black solid;
+    word-wrap:break-word;
+    
+    width: 10%;
+    background-color: white;
+    margin: 20px;
+    font-weight: 800;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+.back a{
+    position:absolute;
+    top:0;
+    right:0;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.project_annotations{
+    
+    float: right;
+    z-index: 1;  
+    right:40px;
+    top:28px;
+    position: fixed; 
+    margin-right: 5%;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border: none;
+    font-family: var(--font);
+    margin: 0px;
+    /* border: tomato 1px solid; */
+    color: white;
+}
+.project_annotations a{
+    
+    
+    color: white;
+}
+.project_annotations_text{
+    font-size: 12px;
+    text-align: right;
+    /* border: tomato 1px solid; */   
+}
+.project_mouse_annotations{
+    font-size: 12px;
+    text-align: right;
+}
+#cursorX{
+    z-index: 1;  
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border: none;
+    width: 25px;
+    color: rgb(255, 255, 255);   
+    font-size: 0.75em;
+    /* border: tomato 1px solid; */
+}
+#cursorY{
+    z-index: 1;  
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border: none;
+    width: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 0.75em;
+    /* border: tomato 1px solid; */
+}
+
+/* width */
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background-color: black;
+        border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgb(255, 255, 255); 
+        ;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ffffff; 
+    }
+
+
+@media all and  (max-width: 1000px) {
+    .instructions_text{
+    /* width: 100%; */
+    }
+    .project_annotations{
+    opacity: 0;
+    }
+    .instructions_text{
+        font-size: 5em;
+        width: 50%;
+    }
+
+}
