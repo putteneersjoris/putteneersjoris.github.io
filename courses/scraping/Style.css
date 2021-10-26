@@ -1,12 +1,12 @@
 
 /*ascii-art*/
 #ascii_art {
-	font-family: Arial;
+	font-family: monospace;
 	white-space: pre;	
 	color: white;
 }
 #ascii_art_text_balloon{
-	font-family: Arial;
+	font-family: monospace;
 	white-space: pre;
 	transform: scale(0.6);
 	color: white;
