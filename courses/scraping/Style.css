@@ -1,6 +1,7 @@
 
 /*ascii-art*/
 #ascii_art {
+	font-size: 3em;
 	font-family: monospace;
 	white-space: pre;	
 	color: white;
