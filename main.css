@@ -89,7 +89,7 @@ color: rgb(255, 255, 255);
 .point a {
     
     text-decoration:none;
-    font-size: 25px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
     font-weight: 400;
     font-family: var(--font);
@@ -103,8 +103,8 @@ color: rgb(255, 255, 255);
     
     text-decoration:none;
     color: rgb(255, 255, 255);
-    font-size: 28px;
-    /* font-weight: bolder; */
+    font-size: 24px;
+    font-weight: bolder;
     
   
     }
