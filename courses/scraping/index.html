@@ -104,9 +104,12 @@
 <div style="color: white; font-family: var(--font); ">
 
 <h2>//bing image scraper</h2><br>
-// Download and install Python 3.10.0 <a href="https://www.python.org/downloads/" style="color: white; font-family: var(--font); font-weight: 800;">here</a>  <br>
-//important, add python to Path in installation! <br>
-//Open up the command promp by typing ⊞+r and writing "cmd". In the command prompt and download the bing image scraper <a href="https://pypi.org/project/bing-image-downloader/" style="color: white; font-family: var(--font); font-weight: 800; "> https://pypi.org/project/bing-image-downloader/</a> <br> <br>
+// Download and install Python 3.10.0 <a href="https://www.python.org/downloads/" style="color: white; font-family: var(--font); font-weight: 800;">https://www.python.org/downloads/</a> or you can download it <a  style="color: white; font-family: var(--font); font-weight: 800;" href="python-3.10.0-amd64.rar"> locally</a>. <br>
+// important, add python to Path in installation! <br>
+// Open up the command promp by typing ⊞+r and writing "cmd". In the command prompt, upgrade "pip" and download the "bing image scraper" <a href="https://pypi.org/project/bing-image-downloader/" style="color: white; font-family: var(--font); font-weight: 800; "> https://pypi.org/project/bing-image-downloader/</a> <br> <br>
+
+$ pip install --upgrade pip <br>
+
 $ pip install bing-image-downloader
 
  <br><br>
@@ -134,10 +137,9 @@ $ python bing_scraper.py <br>
 $ python -m instagram_scraper.app pkulper -u username -p password <br>
 <br>
 //takes 100 posts and their metadata from a user, and stores them in a given directory<br><br>
-$ python -m instagram_scraper.app pkulper -t image --media-metadata --maximum 100 -u scrapingwithkul -p scrapingwithkuleuven -d "C:\Users\joris\Downloads\bing scraper\dataset\instagram"
+$ python -m instagram_scraper.app pkulper -t image --media-metadata --maximum 100 -u username -p password -d "path/to/folder"
 <br><br>
-https://github.com/arc298/instagram-scraper
-<br><br>
+
 
 
 
@@ -147,9 +149,15 @@ https://github.com/arc298/instagram-scraper
 
 <h2>//imagemagick</h2> <br>
 
-Now that we have a dataset, we can use ImageMagick to alter it. <br>
-More information can be found here: <a href="https://imagemagick.org/index.php"style="color: white; font-family: var(--font); font-weight: 800;">https://imagemagick.org/index.php</a> <br>
-//here are some examples: 
+// Now that we have a dataset, we can use ImageMagick to alter it. <br>
+// download it here <br><a style="color: white; font-family: var(--font); font-weight: 800;" href="https://imagemagick.org/script/download.php#windows">https://imagemagick.org/script/download.php#windows</a> (windows) or <a style="color: white; font-family: var(--font); font-weight: 800;" href="ImageMagick-7.1.0-12-Q16-HDRI-x64-dll.exe">locally</a><br>
+<a style="color: white; font-family: var(--font); font-weight: 800;" href="https://imagemagick.org/script/download.php#macosx">https://imagemagick.org/script/download.php#macosx</a> (macOS)<br>
+<a style="color: white; font-family: var(--font); font-weight: 800;" href="https://imagemagick.org/script/download.php#linux">https://imagemagick.org/script/download.php#linux</a> (linux)<br>
+// More information can be found here: <a href="https://imagemagick.org/index.php"style="color: white; font-family: var(--font); font-weight: 800;">https://imagemagick.org/index.php</a> <br> <br>
+//open up the command prompt and check the version. It should be version 7-0-10 <br>
+$ magick --version <br><br>
+//go to yor working directory in the command prompt. <br>
+//here are some command examples: 
 <br>
 <br>
 //convert to png<br>
@@ -216,9 +224,9 @@ $ magick convert *.jpg -canny 0x1+10%+30% -set filename:base "%[basename]" "%[fi
 $ magick montage -tile 2x1 *.jpg output.png<br>
 <br>
 
-//A collection of commands can also be written as a .bat file. <br>
+//A collection of commands can also be written as a .bat file (DOS batch file). <br>
 <br>
-// download the example <a href="canny_edges.bat" style="color: white; font-family: var(--font); font-weight: 800;"> here</a>
+// get the .bat file here  <a href="canny_edges.bat" style="color: white; font-family: var(--font); font-weight: 800;"> here</a>
 
 <br>
 <img src="big.jpg" style="width: 1000px;" alt="">
@@ -282,6 +290,7 @@ go to that shortcut and: right click>properties> and change the target directory
 <img src="maps.jpg" style="width: 1000px;" alt="">
 <br><br><br><br>
 
+download all files through a temporarily WeTransfer link <a style="color: white; font-family: var(--font); font-weight: 800;" href="https://we.tl/t-O70Q9qdiAz"> here</a>.
 </div>
 </div>
 
