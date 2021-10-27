@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!-- <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"> -->
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="Style.css">
@@ -7,10 +7,11 @@
 </head>
 <body style="background-color: black;">
     
-<div id="ascii_art">
+<!-- <div id="ascii_art">
 
                                              
-               hallo this is some text                      
+               hallo this is some text ,
+               lets try to make this work
                                                             
                             ║     ║                         
                             ║     ║                         
@@ -53,15 +54,222 @@
       │                              │      │ │             
       │                              │      │ │             
       │                              │      └─┘             
-      └──────────────────────────────┘                      
-                                                            
-                                                            
-                                                            
-                                                            
+      └──────────────────────────────┘              
+</div>          -->
+<div style="left: 50px; top: 150px; margin: 50px;">
+<h1 style="color: white; font-family: var(--font); font-weight: 800;">2D-3D scraping</h1>
+<br><br><br><br>
+<div style="color: white; font-family: var(--font); ">
+
+<h2>//bing image scraper</h2><br>
+// Download and install Python 3.10.0 <a href="https://www.python.org/downloads/" style="color: white; font-family: var(--font); font-weight: 800;">here</a>  <br>
+//important, add python to Path in installation! <br>
+//Open up the command promp by typing ⊞+r and writing "cmd". In the command prompt and download the bing image scraper <a href="https://pypi.org/project/bing-image-downloader/" style="color: white; font-family: var(--font); font-weight: 800; "> https://pypi.org/project/bing-image-downloader/</a> <br> <br>
+$ pip install bing-image-downloader
+
+ <br><br>
+//make a folder and go there by typing "cd" and dragging that folder into the command prompt. <br>
+//adjust <a href="bing_scraper.py" style="color: white; font-family: var(--font); font-weight: 800; ">this</a> python file with the correct searchterm and amount, and run it through the command line.
+<br><br>
+$ python bing_scraper.py <br>
+<br>
+<br>
+//now images should be downloading
+<br>
+<br>
+<img src="bing.jpg" style="width: 1000px;" alt="">
+<br><br><br><br>
+<h2> //instagram scraper</h2>
+<br>
+
+//install the instagram scraper: <a href="https://github.com/arc298/instagram-scraper" style="color: white; font-family: var(--font); font-weight: 800;"> https://github.com/arc298/instagram-scraper</a><br>
+<br>$ pip install instagram-scraper==1.7.0<br>
+
+<br>
+//here are some examples: 
+<br>
+//takes all the posts from a specific user<br><br>
+$ python -m instagram_scraper.app pkulper -u username -p password <br>
+<br>
+//takes 100 posts and their metadata from a user, and stores them in a given directory<br><br>
+$ python -m instagram_scraper.app pkulper -t image --media-metadata --maximum 100 -u scrapingwithkul -p scrapingwithkuleuven -d "C:\Users\joris\Downloads\bing scraper\dataset\instagram"
+<br><br>
+https://github.com/arc298/instagram-scraper
+<br><br>
 
 
-</div>                                                 
-                                           
+
+<img src="a.jpg" style="width: 250px;" alt=""><img src="b.jpg" style="width: 250px;" alt=""><img src="c.jpg" style="width: 250px;" alt=""><img src="d.jpg" style="width: 250px;" alt="">
+<br><br><br><br>
+
+
+<h2>//imagemagick</h2> <br>
+
+Now that we have a dataset, we can use ImageMagick to alter it. <br>
+More information can be found here: <a href="https://imagemagick.org/index.php"style="color: white; font-family: var(--font); font-weight: 800;">https://imagemagick.org/index.php</a> <br>
+//here are some examples: 
+<br>
+<br>
+//convert to png<br>
+$ magick *.jpg image.png<br><br>
+
+//convert to gif<br>
+$ magick convert *.jpg animation.gif<br><br>
+
+//resize<br>
+$ magick mogrify -resize 1080x1080! *.jpg<br><br>
+
+
+//label multiple images<br>
+$ magick convert *.jpg -annotate +20+30 "svalbard_dataset" a.jpg <br>
+$ magick convert *.jpg -annotate +20+30 "%f "  a.jpg<br><br>
+
+//metadata labels<br>
+$ magick convert *.jpg -fill black -pointsize 50 -gravity center -annotate +0-0 "%f" %f.jpg<br><br>
+
+//filename montage<br>
+$ magick montage -label %f   *.jpg montage.jpg <br>
+$ magick montage  *.jpg -pointsize 10 -set label '%f\n%wx%h'  -background White  label_fname3.jpg
+<br>
+<br>
+
+//print text as image<br>
+$ magick convert -gravity center pango:@pango_test.txt  json_text.jpg<br><br>
+
+//apply blur<br>
+$ magick convert -blur 0x10 Image_1.jpg output.jpg<br><br>
+
+//create 10 colors from image<br>
+$ magick convert *.jpg +dither -colors 10 -unique-colors -filter box -resize 3000% colorcode.png<br><br>
+
+//batch ordered dithering<br>
+$ magick convert *.jpg -normalize -dither FloydSteinberg -colors 10  dithering.png<br>
+$ magick convert *.jpg -ordered-dither o2x2 test_2.png<br>
+$ magick convert *.jpg -ordered-dither o8x8 test_8.png<br><br>
+
+//treshold<br>
+$ magick convert *.jpg +dither  -threshold 30.98% treshold.png<br>
+$ magick convert *.jpg -colorspace gray  -contrast-stretch 50%,50% o.png //treshold 50%<br><br>
+
+//grayscale<br>
+$ magick convert *.jpg -colorspace Gray gray.jpg<br><br>
+
+//bordercolor<br>
+$ magick convert *.jpg -bordercolor black -border 1  border.jpg //add a 1px black border<br>
+$ magick convert *.jpg -matte -bordercolor none -border 10  border_none.png //add a transparancy border<br>
+<br>
+//edge detection<br>
+$ magick convert *.jpg -canny 0x1+10%+30% edge_detection.jpg<br><br>
+
+//images with their 10-color counterparts<br><br>
+
+$ magick convert *.jpg +dither -colors 10 -unique-colors -filter box -resize 3000% -set filename:base "%[basename]" "%[filename:base]_edge.jpg"<br>
+$ magick mogrify -resize 256x256! *.jpg<br>
+$ magick montage -tile 2x1 *.jpg output.png<br>
+$ magick montage -label %f   *.jpg montage.jpg <br><br>
+
+//combinations<br>
+//montage pairs for descriminiator vs generator machine learning <br>
+$ magick convert *.jpg -canny 0x1+10%+30% -set filename:base "%[basename]" "%[filename:base]_edge.jpg"<br>
+$ magick montage -tile 2x1 *.jpg output.png<br>
+<br>
+
+//A collection of commands can also be written as a .bat file. <br>
+<br>
+// download the example <a href="canny_edges.bat" style="color: white; font-family: var(--font); font-weight: 800;"> here</a>
+
+<br>
+<img src="big.jpg" style="width: 1000px;" alt="">
+<br><br><br><br>
+
+<h2>//Reality Capture</h2> <br>
+we can use this scraped dataset to generate a "moneyshot" 3d model <br>
+download the demo 2d files <a href="svalbard seedvault.rar" style="color: white; font-family: var(--font); font-weight: 800;"> here</a> <br>
+
+download the demo 3d files <a href="obj.rar" style="color: white; font-family: var(--font); font-weight: 800;"> here</a>
+<br>
+<br>
+password: "softoroom" <br>
+	Instructions:<br>
+	1. Install the software from setup.exe.<br>
+	2. Place files from crack dir to install dir and overwrite existed files.<br>
+	3. Double click registration.reg and confirm writting data to registry.<br><br>
+
+	workflow:<br>
+	1. workflow>input images<br>
+	2. alignment>align images<br>
+	3. reconstruction>normal detail<br>
+	4. reconstruction>texture<br>
+	5. resonstruction>export>mesh<br>
+<br><br>
+<img src="3d.jpg" style="width: 1000px;" alt="">
+<br><br><br><br>
+
+<h2>//scraping from google Maps/Earth</h2> <br>
+
+go to google chrome home directory. most of the times, this is found here: "C:\Program Files (x86)\Google\Chrome\Application". <br>
+create a shortcut of "chrome.exe" to your desktop<br><br>
+go to that shortcut and: right click>properties> and change the target directory to this -> C:\Windows\System32\cmd.exe /c "SET RENDERDOC_HOOK_EGL=0 && START "" ^"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe^" --disable-gpu-sandbox --gpu-startup-dialog"
+<br><br>
+//blender 2.93 <br>
+
+	https://www.blender.org/download/<br><br>
+//blender addon<br>
+
+	https://github.com/eliemichel/MapsModelsImporter/releases<br><br>
+
+
+
+//renderdoc 1.13<br>
+
+	https://renderdoc.org/builds<br><br>
+
+//workflow<br>
+
+	1) install the blender addon<br>
+	2) click on the modified google chrome shortcut, remember the PID number<br>
+	3) open renderdoc: file>inject into process<br>
+	4) write down PID number and double click on the "chrome tab"<br>
+	5) click "ok" on the PID number (from the chrome shortcut)<br>
+	6) go the the desired location on maps/earth<br>
+	7) set the "capture after delay" to 1 sec, press it and wiggle the google maps/earth <br>viewport around<br>
+	8) double click on the file and "save capture as"<br>
+	9) import file into blender<br>
+
+<br>
+<img src="maps.jpg" style="width: 1000px;" alt="">
+<br><br><br><br>
+
+</div>
+</div>
+
+
+<!-- <div class="title" style="top: 50px; left: 500px;"> SCRAPING</div>
+<div class="sub-title" style="top: 500px; left: 500px;"> instagram scraping</div>
+<div class="sub-title"> bing scraping</div>
+<br><br><br><br>
+<div class="sub-title"> imagemagick</div>
+<div class="sub-sub-title"> resize</div>
+<div class="sub-sub-title"> side by side</div>
+<div class="sub-sub-title"> mosaic</div>
+<br><br><br><br>
+<div class="sub-title"> realitycapture</div>
+<div class="sub-sub-title"> workflow: add inputs</div>
+<div class="sub-sub-title"> alignments: align images</div>
+<div class="sub-sub-title"> alignments: align images</div>
+<div class="sub-sub-title"> reconstruction: normal detail</div>
+<div class="sub-sub-title"> reconstruction: mesh export</div>
+<br><br><br><br>
+<div class="sub-title"> automate the process with a .bat file</div>
+<br><br><br><br>
+<div class="sub-title"> processing 3d models (<a href="">next workshop</a>)</div>
+<br><br><br><br>
+<div class="sub-title"> sketchfab </div>
+<div class="sub-title"> google earth</div>
+<div class="sub-sub-title"> setup chrome</div>
+<div class="sub-sub-title"> setup blender</div>
+<br><br><br><br>
+                -->
 </body>
 </html>
 
