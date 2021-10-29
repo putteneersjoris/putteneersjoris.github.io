@@ -253,12 +253,15 @@ color: rgb(255, 255, 255);
     /* border: tomato 1px solid; */
     color: white;
 }
-
-.project_annotations a{
-    
-    
-    color: white;
+.project_annotations .hic_et_nunc{  
+    line-height: 2.5;
 }
+.project_annotations .mail_underline{  
+   text-decoration: underline;
+    
+}
+
+
 .project_annotations_text{
     font-size: 12px;
     text-align: right;
