@@ -331,20 +331,32 @@ color: rgb(255, 255, 255);
     .description_border_only_text a{
     color: red;
        
-  
     }
 
 
     img{max-width: 100%;}
 
-@media all and  (max-width: 1300px) {
-    .project_annotations{
-        opacity: 0;
-    }
-    .project_back_link a{    
-        opacity: 0;    
-    }
+    @media all and  (max-width: 1000px) {
+        .project_annotations{
+            opacity: 0;    
+        }
+        .header{
+            width: 80%;
+            
+            padding: 15px ;
+            margin: 15px;
+        }
+        .header .title{
+        font-size: 30px;
         
-}
+        }
+        .header .bar{
+            width: 290px;
+        }
+        .header .text{
+            font-size: 9.4px;
+        }
+        
+    }
 
 /*# sourceMappingURL=main.css.map*/
