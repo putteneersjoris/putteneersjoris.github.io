@@ -29,19 +29,7 @@
 
 </head>
 <body >
-<!-- 
-    <script>
-        (function($) {
-            
-            $(document).ready(function() {
-                if ($(window).width() <= 1000) 
-                {
-                $('.image_side').remove();
-                }
-            })
-            
-        })(jQuery);
-    </script> -->
+
 
 
         
@@ -70,22 +58,13 @@
         <div class="area">
 
             
-            <!-- <div class="extra">
-               <p><div class="f"><a href="">algorithm</a></div></p>  
-                <div class="f"><a href="">creator</a></div> 
-                <div class="f"><a href="">contact</a></div>
-                <div class="f"><a href="">website</a></div>
-                <div class="f"><a href="">view on objkt.com</a></div>
-                <div class="f"><a href="">view on hicetnunc.xyz</a></div>  
-            </div> -->
 
             <div class="extra">
                 <div class="f">
-                    <a href="">algorithm</a> <a href="">creator</a> <a href="">website</a> <a href="">objkt.com</a> <a href="">hicetnunc.xyz</a> 
+                    <a href="">algorithm</a> <a href="">creator</a> <a href="">website</a> <a href="">objkt.com</a>  <a href="#" onclick="randomSite();" >random</a> 
                     <span> </span>
                 </div>
              </div>
-
 
         
 
@@ -4670,6 +4649,8 @@
       </div>
 
     <script>
+        // delete big images hen mobile
+
         $(".image_grid").hover(function(){
             $(this).find(".display_class").toggle();
         });
@@ -4678,6 +4659,18 @@
             $(this).find(".display_class").toggle();
         });
 
+        // make a random site link
+        var sites = [
+            '509500',
+            '487345',
+            '487311',
+            '487289'
+        ];
+    
+        function randomSite() {
+            var i = parseInt(Math.random() * sites.length);
+            location.href = "https://objkt.com/asset/hicetnunc/" + sites[i];
+        }
         
 
     </script>
