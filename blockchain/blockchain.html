@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="STYLE NEW LAYOUT.css">
+    <link rel="stylesheet" href="blockchain.css">
     <link rel="icon" type="image/png" href="icon.png" sizes="32x32">
     <title>putteneersjoris.xyz</title>
 
@@ -48,7 +48,10 @@
     checkWidth();
     $(window).resize(checkWidth);
     });
+
 </script>
+
+
   
 
     <!--conteiner div, responsible for a margin arond the div-->
@@ -60,13 +63,47 @@
             
 
             <div class="extra">
-                <div class="f">
-                    <a href="">algorithm</a> <a href="">creator</a> <a href="">website</a> <a href="">objkt.com</a>  <a href="#" onclick="randomSite();" >random</a> 
-                    <span> </span>
-                </div>
-             </div>
+    
+                <div class="flex">
+                
+                    <div class="show">
+                        <div class="show_text">algorithm</div>  
+                            <div class="hide"> 
+                                <h2>Algorithm</h2>
+                           
+                                Synesthesia aims to create an architecture that defies classification and reductionism. It tries to explore unseen levels of resolution and topological complexity in architecture by developing compositional strategies based on a purely algorithmic processes.
+                                <br><br>
+                                In the Synesthesia project, algorithms are used that create a form that appears at once synthetic and organic. The design process strikes a delicate balance between the expected and the unexpected, between control and relinquishment. The algorithms are deterministic as they do not incorporate randomness, but the results are not necessarily entirely foreseeable.
+                                <br><br>
+                                The resulting architecture does not lend itself to visual reductionism. Rather, the processes can devise truly surprising topographies and topologies that go beyond what one could have traditionally conceived. Synesthesia is between chaos and order, both natu-ral and artificial. Any references to nature or existing styles are not integrated into the design process, but are evoked only as associations in the eye of the beholder.
+                            </div>
+                    </div>
+            
+            
+                    
+                    <div class="show">
+                        <div class="show_text">creator</div>  
+                            <div class="hide"> 
+                                <h2>Algorithm</h2>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum impedit ullam, modi, saepe nemo, repudiandae doloremque explicabo enim non voluptatum inventore aut minus vitae. Sit dicta eum voluptatibus provident asperiores!
+                            </div>
+                    </div>
 
-        
+                    <div class="show">
+                        <div class="show_text"> <a href="../index.html">website</a> </div>  
+                    </div>
+
+                    <div class="show">
+                        <div class="show_text"> <a href="https://objkt.com/profile/tz1fSL9BdNNG5ZxGDF92qvwqN23rCuYRiWRn/created">view on Objkt.com</a> </div>  
+                    </div>
+
+                    <div class="show">
+                        <div class="show_text"><a href="#" onclick="randomSite();" >random asset</a> </div>  
+                    </div>
+    
+            
+                </div>
+            </div>
 
 
             <div class="title">
@@ -4615,6 +4652,17 @@
                     </a>   
                     
                
+                    <script>
+                        // delete big images hen mobile
+                
+                        $(".image_grid").hover(function(){
+                            $(this).find(".display_class").toggle();
+                        });
+                
+                        $(".image_grid_gif").hover(function(){
+                            $(this).find(".display_class").toggle();
+                        });
+                    </script>
 
                 
 
@@ -4649,16 +4697,7 @@
       </div>
 
     <script>
-        // delete big images hen mobile
-
-        $(".image_grid").hover(function(){
-            $(this).find(".display_class").toggle();
-        });
-
-        $(".image_grid_gif").hover(function(){
-            $(this).find(".display_class").toggle();
-        });
-
+        
         // make a random site link
         var sites = [
             '509500',

@@ -73,7 +73,7 @@
     padding-top: 5px;
     /* border: 1px rgb(225, 0, 255) solid; */
     min-width: 50px;
-    max-width: 400px;
+    max-width: 600px;
     padding-left: 10px;
     float:none;
     
@@ -285,14 +285,6 @@
     cursor: pointer;
 }
 
-.extra{ 
-    /* border: 3px pink solid; */
-    position: fixed;
-    right: 30px;
-    bottom: -0px;
-    width: 32.2%;
-    z-index: 1000;
-}
 
 /*  */
 
@@ -318,13 +310,14 @@
     font-weight: 400;
 } */
 
-span{
+/* span{
     width:100%;
     display:inline-block;
     line-height:0px;
-  }
+    
+  } */
 
-
+/* 
 .f{
     text-align:justify;
   }
@@ -334,6 +327,7 @@ span{
     font-size: 15px;
     font-weight: 400;
     text-align:justify;  
+    
 }
 
 
@@ -344,7 +338,7 @@ span{
     font-weight: 800;
     background-color: white;
     text-decoration: none;
-}
+} */
 
 .line{
     stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap:square;
@@ -526,3 +520,89 @@ top: 500px;
 
 
 img{max-width: 100%;}
+
+
+
+
+.extra{
+    position: fixed;
+    right: 30px;
+    bottom: 15px;
+    width: 32.3%;
+    z-index: 1000;
+    /* border: 3px solid pink; */
+}
+
+.hide{
+display: none;
+font-family: var(--font);   
+font-size: 13px;
+font-weight: 100;
+}
+
+.show:hover .hide{
+display: block;
+color: white;
+position: fixed;
+right: 30px;
+bottom: 60px;
+width: 32.3%;
+text-align: left;
+/* border: 3px solid pink; */
+
+}
+
+.flex{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.show_text{
+    color: white;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 400;
+    text-align:justify;
+    padding: 2px;
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+
+.show_text:hover {
+color: black;
+background-color: white;
+font-family: var(--font);
+font-size: 15px;
+font-weight: 800;
+text-align:justify;
+padding: 2px;
+cursor: pointer;
+text-decoration: none;
+
+
+}
+.show_text a{
+    color: white;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 400;
+    text-align:justify;
+    /* padding: 3px; */
+    cursor: pointer;
+}
+
+.show_text:hover a {
+color: black;
+background-color: white;
+font-family: var(--font);
+font-size: 15px;
+font-weight: 800;
+margin: 0px;
+/* padding: 3px; */
+cursor: pointer;
+/* text-decoration: none; */
+
+}
