@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blockchain.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="icon.png" sizes="32x32">
     <title>putteneersjoris.xyz</title>
 
@@ -49,8 +49,20 @@
     $(window).resize(checkWidth);
     });
 
+
+    //dont show display_class on startup
+    
+    setTimeout(function() {
+    $('.loading_screen').fadeOut(60); },10);
+
+
 </script>
 
+<!-- loading screen -->
+
+<div class="loading_screen" >
+    <span class="display_class"></span>
+</div>    
 
   
 
@@ -67,40 +79,97 @@
                 <div class="flex">
                 
                     <div class="show">
-                        <div class="show_text">algorithm</div>  
+                        <div class="show_text">Algorithm</div>  
                             <div class="hide"> 
-                                <h2>Algorithm</h2>
-                           
-                                Synesthesia aims to create an architecture that defies classification and reductionism. It tries to explore unseen levels of resolution and topological complexity in architecture by developing compositional strategies based on a purely algorithmic processes.
+                                <h2>The Algorithm</h2>
+                                The algorithm aimes to create an architecture that defies classification and reductionism. It tries to explore unseen levels of resolution and topological complexity in architecture by developing compositional strategies based on a purely algorithmic processes.
+                                <br>
+                                <br>
+                                In the Synesthesia Blockchain project, algorithms are used to create a structure that appears at once synthetic and organic. The design process strikes a delicate balance between the expected and the unexpected, between control and relinquishment. The algorithms are deterministic as they do not incorporate randomness, but the results are not necessarily entirely foreseeable.
+                                <br>
+                                <br>
+                                The resulting architecture does not lend itself to visual reductionism. Rather, the processes can devise truly surprising topographies and topologies that go beyond what one could have traditionally conceived. The algorithm operates between chaos and order, both natural and artificial. Any references to nature or existing styles are not integrated into the design process, but are evoked only as associations in the eye of the beholder.
                                 <br><br>
-                                In the Synesthesia project, algorithms are used that create a form that appears at once synthetic and organic. The design process strikes a delicate balance between the expected and the unexpected, between control and relinquishment. The algorithms are deterministic as they do not incorporate randomness, but the results are not necessarily entirely foreseeable.
-                                <br><br>
-                                The resulting architecture does not lend itself to visual reductionism. Rather, the processes can devise truly surprising topographies and topologies that go beyond what one could have traditionally conceived. Synesthesia is between chaos and order, both natu-ral and artificial. Any references to nature or existing styles are not integrated into the design process, but are evoked only as associations in the eye of the beholder.
                             </div>
                     </div>
             
-            
+                    <div class="show">
+                        <div class="show_text">Project</div>  
+                            <div class="hide"> 
+                                <h2>The Project</h2> 
+                                
+
+                                The rows depict the system in time. <br>
+                                The columns depict the system in different starting parameters. 
+                                <br> <br>
+                                
+                                The starting parameter configuration includes: <br>
+                                - Chamber circulation and amount. <br>
+                                - Chamber volume and surface area.<br>
+                                - Chamber distriution, frequency, density and sparseness.<br>
+                                - Structural integrity
+                                - Surface secretion
+                                <br><br><br>
+                                
+                                Although the algorithm does not have any preconcieved notions about architecture history, architectural typologies become visible through permutation and iteration.
+                                <br> <br>
+                                In the end, 25 starting seeds where manually curated from over 35.000 generations.
+                                <br><br>
+                                <p style="padding:0px; color:rgb(0, 0, 0); background-color:white; font-weight:800; padding:3px; margin:0px;">
+                                A user who obtains all 10 structures from the same starting seed (1 row) will recieve a physical A2 (420x594mm 600 dpi) print of 1 iteration shipped to anywhere in the world without cost. 
+                                </p>
+                                
+                                <br>
+                                <!-- <div class="print_flexbox">
+                                    <img src="./data/prints/1.jpg" class="print">
+                                    <img src="./data/prints/1.jpg" class="print">
+                                </div> -->
+                                
+                            </div>  
+                    </div>
                     
                     <div class="show">
-                        <div class="show_text">creator</div>  
+                        <div class="show_text">Creator</div>  
                             <div class="hide"> 
-                                <h2>Algorithm</h2>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum impedit ullam, modi, saepe nemo, repudiandae doloremque explicabo enim non voluptatum inventore aut minus vitae. Sit dicta eum voluptatibus provident asperiores!
+                                <h2>The Creator</h2>
+                                Joris putteneers is multidisciplinary architect and researcher, interested in speculating the anthroposcene through means of software, hardware and media technologies.
+                                <br><br>
+                                His work has been internationally exhibited at MomA New York, Londen design festival, Venice Biennale and multiple film festivals.
+                                He has taught studios and workshops internationally at the Bartlett UCL, Texas A&M, KUL Faculty of Architecture and TU Wien.
+                                <br><br>
+                                Since 2017 he has been actively working in his practice where he develops solutions in the fields of Data driven design, Machine learning applications, VFX, web and software development, visualisations and Art direction.
+                                <br><br>
+                               
                             </div>
                     </div>
 
+
                     <div class="show">
-                        <div class="show_text"> <a href="../index.html">website</a> </div>  
+                        <div class="show_text"> <a href="../index.html">Website</a> </div> 
+                            <div class="hide"> 
+                                This link will redirect you to https://putteneersjoris.xyz.
+                                <br><br>
+                            </div> 
                     </div>
 
                     <div class="show">
-                        <div class="show_text"> <a href="https://objkt.com/profile/tz1fSL9BdNNG5ZxGDF92qvwqN23rCuYRiWRn/created">view on Objkt.com</a> </div>  
+                        <div class="show_text"> <a href="https://objkt.com/profile/tz1fSL9BdNNG5ZxGDF92qvwqN23rCuYRiWRn/created">View on Objkt.com</a> </div> 
+                            <div class="hide"> 
+                                
+                                This link will redirect you to https://objkt.com/profile/tz1fSL9BdNNG5ZxGDF92qvwqN23rCuYRiWRn/created.
+                                <br><br>
+                            </div>  
                     </div>
 
-                    <div class="show">
-                        <div class="show_text"><a href="#" onclick="randomSite();" >random asset</a> </div>  
-                    </div>
+
     
+                    
+                    <!-- <div class="show">
+                        <div class="show_text"><a href="#" onclick="randomSite();" >Random asset</a> </div>  
+                            <div class="hide"> 
+                                This link will redirect you to 1 of the 256 randoms asset on https://objkt.com.
+                            </div>  
+                    </div> -->
             
                 </div>
             </div>
@@ -113,7 +182,13 @@
                     info
                 </div>
             <div class="info">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, debitis saepe deserunt ratione nesciunt officiis distinctio eius nulla. Ab, odit sunt labore minus et corporis archite archite archite archite archite archite archite               
+                <br>
+                A collection of 256 (250+6) algorithmically fabricated assets minted on the Tezos blockchain.
+                
+                Each asset has a resolution of 2000x2412pixels (.jpg or .gif format) and is limited to 1 edition with a royalty of 16%. 
+                
+                Every Friday 2pm Central Time (CT), 2 new rows will be made available for purchase.      
+
             </div>
             <br>
             <div class="image_area_full">
@@ -4436,177 +4511,6 @@
                     </div>
                 </a>        
                 
-                 <!--! row Z -->
-
-                 <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z1</div>
-                                <div class="d">1.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_0.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_0.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z1</span>
-                    </div>
-                </a>    
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z2</div>
-                                <div class="d">2.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_1.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_1.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z2</span>
-                    </div>
-                </a> 
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z3</div>
-                                <div class="d">3.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_2.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_2.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z3</span>
-                    </div>
-                </a> 
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z4</div>
-                                <div class="d">4.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_3.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_3.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z4</span>
-                    </div>
-                </a> 
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z5</div>
-                                <div class="d">5.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_4.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_4.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z5</span>
-                    </div>
-                </a> 
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z6</div>
-                                <div class="d">6.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_5.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_5.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z6</span>
-                    </div>
-                </a> 
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z7</div>
-                                <div class="d">7.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_6.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_6.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z7</span>
-                    </div>
-                </a> 
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z8</div>
-                                <div class="d">8.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_7.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_7.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z8</span>
-                    </div>
-                </a> 
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z9</div>
-                                <div class="d">9.0<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_8.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_8.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z9</span>
-                    </div>
-                </a> 
-                
-                <a href="objkt link">
-                    <div class="image_grid" >
-                                <div class="b"> owned by: / </div>
-                                <div class="c">Z10</div>
-                                <div class="d">10<br> tez</div>
-                        <div class="image_small" >
-                            <img src="./data/small/z_9.jpg"></div>
-                        <div class="image_side">
-                            <img src="./data/medium/z_9.jpg" >
-                            <div class="e">
-                                <span class="black_border_side_image"></span>
-                            </div>
-                        </div>
-                        <span class="display_class">Z10</span>
-                    </div>
-                </a>          
 
 
                 
@@ -4618,13 +4522,14 @@
                     <a href="https://google.com">
                         <div class="image_grid_gif" >
                                     <div class="b_gif"> owned by: / </div>
-                                    <div class="c_gif">Y6</div>
+                                    <div class="c_gif">Z1</div>
                                     <div class="d_gif">25<br> tez</div>
+                                    <div class="limited_edition_gif">LE</div>
                             <div class="image_small" >
-                                <img src="./data/limited_edition/small/test.gif">
+                                <img src="./data/limited_edition/1_small_pp.gif">
                             </div>
                             <div class="image_side">
-                                <img src="./data/limited_edition/medium/test.gif" >
+                                <img src="./data/limited_edition/1_medium_pp.gif" >
                                 <div class="e">
                                     <span class="black_border_side_image"></span>
                                 </div>
@@ -4636,13 +4541,90 @@
                     <a href="https://google.com">
                         <div class="image_grid_gif" >
                                     <div class="b_gif"> owned by: / </div>
-                                    <div class="c_gif">Y6</div>
+                                    <div class="c_gif">Z2</div>
                                     <div class="d_gif">25<br> tez</div>
+                                    <div class="limited_edition_gif">LE</div>
                             <div class="image_small" >
-                                <img src="./data/limited_edition/small/test2.gif">
+                                <img src="./data/limited_edition/2_small_pp.gif">
                             </div>
                             <div class="image_side">
-                                <img src="./data/limited_edition/medium/test2.gif" >
+                                <img src="./data/limited_edition/2_medium_pp.gif" >
+                                <div class="e">
+                                    <span class="black_border_side_image"></span>
+                                </div>
+                            </div>
+                            <span class="display_class">Z3</span>
+                        </div>
+                    </a>   
+                                    
+                    <a href="https://google.com">
+                        <div class="image_grid_gif" >
+                                    <div class="b_gif"> owned by: / </div>
+                                    <div class="c_gif">Z3</div>
+                                    <div class="d_gif">25<br> tez</div>
+                                    <div class="limited_edition_gif">LE</div>
+                            <div class="image_small" >
+                                <img src="./data/limited_edition/3_small_pp.gif">
+                            </div>
+                            <div class="image_side">
+                                <img src="./data/limited_edition/3_medium_pp.gif" >
+                                <div class="e">
+                                    <span class="black_border_side_image"></span>
+                                </div>
+                            </div>
+                            <span class="display_class">Y6</span>
+                        </div>
+                    </a>   
+                                    
+                    <a href="https://google.com">
+                        <div class="image_grid_gif" >
+                                    <div class="b_gif"> owned by: / </div>
+                                    <div class="c_gif">Z4</div>
+                                    <div class="d_gif">25<br> tez</div>
+                                    <div class="limited_edition_gif">LE</div>
+                            <div class="image_small" >
+                                <img src="./data/limited_edition/4_small_pp.gif">
+                            </div>
+                            <div class="image_side">
+                                <img src="./data/limited_edition/4_medium_pp.gif" >
+                                <div class="e">
+                                    <span class="black_border_side_image"></span>
+                                </div>
+                            </div>
+                            <span class="display_class">Y6</span>
+                        </div>
+                    </a>   
+                                    
+                    <a href="https://google.com">
+                        <div class="image_grid_gif" >
+                                    <div class="b_gif"> owned by: / </div>
+                                    <div class="c_gif">Z5</div>
+                                    <div class="d_gif">25<br> tez</div>
+                                    <div class="limited_edition_gif">LE</div>
+                            <div class="image_small" >
+                                <img src="./data/limited_edition/5_small_pp.gif">
+                            </div>
+                            <div class="image_side">
+                                <img src="./data/limited_edition/5_medium_pp.gif" >
+                                <div class="e">
+                                    <span class="black_border_side_image"></span>
+                                </div>
+                            </div>
+                            <span class="display_class">Y6</span>
+                        </div>
+                    </a>   
+                                    
+                    <a href="https://google.com">
+                        <div class="image_grid_gif" >
+                                    <div class="b_gif"> owned by: / </div>
+                                    <div class="c_gif">Z6</div>
+                                    <div class="d_gif">25<br> tez</div>
+                                    <div class="limited_edition_gif">LE</div>
+                            <div class="image_small" >
+                                <img src="./data/limited_edition/6_small_pp.gif">
+                            </div>
+                            <div class="image_side">
+                                <img src="./data/limited_edition/6_medium_pp.gif" >
                                 <div class="e">
                                     <span class="black_border_side_image"></span>
                                 </div>

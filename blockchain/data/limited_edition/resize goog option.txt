@@ -1,0 +1,8 @@
+magick mogrify -resize 614x740! -sharpen 0x3 *.jpg
+
+
+magick mogrify -resize 614x740! -sharpen 0x0.1 *.jpg
+
+magick mogrify -resize 107x129! -sharpen 0x0.5 *.jpg
+
+107 * 129
