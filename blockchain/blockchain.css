@@ -667,10 +667,13 @@ cursor: pointer;
 
     }
 
-
+ 
 }
-
-
+@media all and  (max-width: 1600px) {
+   .image_side{
+        display: none;
+    }
+}
 
 img{max-width: 100%;}
 
