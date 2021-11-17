@@ -186,11 +186,11 @@
     height: var(--imageresx);
     display: inline-block;
     
-    background: url("Hyper\ chunk/1.gif") no-repeat;
+    background: url("Hyper_chunk/1.gif") no-repeat;
 }
 .project_image_Hyperchunk:hover{
     
-    background: url("Hyper\ chunk/1_colored.gif") no-repeat;
+    background: url("Hyper_chunk/1_colored.gif") no-repeat;
 }
 
 .project_image_Dodenaus{
