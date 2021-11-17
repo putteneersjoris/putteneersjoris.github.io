@@ -144,6 +144,9 @@
                         
                         margin-right: -1px;
                       margin-bottom: -1px;
+                      max-width: 95px;
+                      text-overflow: ellipsis;
+                      overflow: hidden
                         
                         
                     }
@@ -183,6 +186,9 @@
                         right: 5px;
                         /* border: olive 1px solid; */
                         text-align: right;
+                        max-width: 90px;
+                        text-overflow: ellipsis;
+                        overflow: hidden
                     }
                     .c_gif{
                         color: rgb(255, 255, 255);
@@ -259,6 +265,7 @@
 
 
 
+
 .b{
     color: rgb(255, 255, 255);
     line-height: 1em;
@@ -273,8 +280,32 @@
     right: 5px;
     /* border: olive 1px solid; */
     text-align: right;
-   
+    max-width: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
 
+.image_grid:hover .b{
+    max-width: 95px;
+    text-overflow: ellipsis;
+    overflow: hidden    
+}
+
+
+.sold_status{
+    color: olive;
+    line-height: 1em;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 10px;
+    padding: 3px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 43px;
+    left: 0px;
+    /* border: olive 1px solid; */
+    text-align: right;
 }
 
 .c{
