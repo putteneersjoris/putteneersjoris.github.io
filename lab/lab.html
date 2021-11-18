@@ -366,6 +366,75 @@ img {max-width:100%;}
         <tr>
             <td id="portfolio_td">2021</td>
             <td id="portfolio_td">
+                <button type="button" class="collapsible">ImageMagick usefull commands</button>
+            
+            <div class="content">
+
+                        <br>
+                        Scene files: <a href = "./imageMagick/compress_files_in_folder.py" class="red_links_lower" target = "_blank" >python file</a>
+                        
+                        
+                        <br>
+                        <br>
+                        //convert all images to png or gif <br>
+                        $ magick *.jpg image.png <br>
+                        $ magick convert -delay 8 *.jpg animation.gif <br>
+                        * where "-delay 8" stands for 100/8 = ticks/seconds = 12.5FPS <br>
+                        <br>
+                        //resize to a certain resolution <br> 
+                        $ magick mogrify -resize 1080x1080! *.jpg <br>
+                        * "!"=don't take into account the original aspect ratio <br>
+                        <br>
+                        //change resolution, compress and sharpen images <br>
+                         magick mogrify -resize 107x129! sourceImage.jpg -strip -interlace Plane -quality 60% -sharpen 0x0.1 *.jpg <br>
+                         <br>
+                        //label images with their own filename and rename them using their own metadata <br>
+                        $ magick convert sourceImage.jpg -fill white -pointsize 50 -gravity center -annotate +0-0 '%f\n%wx%h' -set filename:base "%[basename]" "%[filename:base]_label.jpg" <br>
+                        <br>
+                        //make a basic image montage <br>
+                        $ magick montage -label %f *.jpg montage.jpg <br>
+                        * useful options: -pointsize 10, -background blue, -fill red, -bordercolor black, -border 1, -geometry +0+0 (leaves no padding around images), tile=4x3 <br>
+                        <br>
+                        //dithering presets <br>
+                        $ magick convert *.jpg -normalize -dither FloydSteinberg -colors 10 output.jpg <br>
+                        $ magick convert *.jpg -ordered-dither o2x2 output.jpg <br>
+                        $ magick convert *.jpg -ordered-dither o8x8 output.jpg <br>
+                        <br>
+                        //canny edge detection <br>
+                        $ magick convert *.png -sharpen 0x15 -canny 0x1+10%+30% output_canny_edges.jpg <br>
+                        * sharpening is optional but useful <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        //Example of a imagemagick cmd in a python file. In this case the program needs to compress files inside a folder<br>
+                        <br>
+                        import os <br>
+                        <br>
+                        # get current working directory <br>
+                        cwd = os.getcwd() <br>
+                        <br>
+                        # user picks a folder in the current working directory <br>
+                        folder = input("Enter the folder you want to compress: ") <br>
+                        <br>
+                        # change dir to inside that folder <br>
+                        pwd = os.path.join(cwd, folder) <br>
+                        os.chdir(pwd) <br>
+                        <br>
+                        # your actual imageMagick command
+                        os.system("magick *.jpg -strip -interlace Plane  -quality 50% -set filename:base \"%[basename]\" \"%[filename:base]_label.jpg\"") <br>
+    
+                        <br><br>
+     
+                    </div>  
+              </div>
+            </td> 
+        </tr>
+
+
+        <tr>
+            <td id="portfolio_td">2021</td>
+            <td id="portfolio_td">
                 <button type="button" class="collapsible">Create geometry turntables with PDG and Python</button>
             
             <div class="content">
