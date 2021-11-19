@@ -150,6 +150,17 @@
                         
                         
                     }
+                                    
+                    .image_grid_gif:hover .b_gif_available{
+                        
+                        margin-right: -1px;
+                      margin-bottom: -1px;
+                      max-width: 95px;
+                      text-overflow: ellipsis;
+                      overflow: hidden
+                        
+                        
+                    }
                     .image_grid_gif:hover .image_small{
                         opacity: 1;
                         cursor: pointer;
@@ -185,6 +196,26 @@
                         bottom: 5px;
                         right: 5px;
                         /* border: olive 1px solid; */
+                        text-align: right;
+                        max-width: 90px;
+                        text-overflow: ellipsis;
+                        overflow: hidden
+                    }
+
+                    .b_gif_available{
+                        color: rgb(255, 255, 255);
+                        line-height: 1em;
+                        background-image: url('./data/available_LE.gif');
+                        font-family: var(--font);
+                        font-weight: 400;
+                        font-size: 15px;
+                        padding: 5px;
+                        margin: 0 auto;
+                        position: absolute;
+                        bottom: 5px;
+                        right: 5px;
+                        /* border: olive 5px solid; */
+                        /* border-image: url("./data/available_LE.gif") 5 5 5 5; */
                         text-align: right;
                         max-width: 90px;
                         text-overflow: ellipsis;
@@ -285,7 +316,35 @@
     overflow: hidden
 }
 
+.b_available{
+    color: rgb(255, 255, 255);
+    line-height: 1em;
+    background-color: rgb(0, 0, 0);
+    background-image:url("./data/available.gif");
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 5px;   ;
+    /* border: olive 5px solid; */
+    /* border-image: url("./data/available2.gif") 5 5 5 5 ;   */
+    text-align: right;
+    max-width: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
 .image_grid:hover .b{
+    max-width: 95px;
+    text-overflow: ellipsis;
+    overflow: hidden    
+}
+
+.image_grid:hover .b_available{
     max-width: 95px;
     text-overflow: ellipsis;
     overflow: hidden    
