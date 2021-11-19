@@ -406,23 +406,13 @@ img {max-width:100%;}
                         <br>
                         <br>
                         <br>
-                        
-                        //Example of a imagemagick cmd in a python file. In this case the program needs to compress files inside a folder<br>
-                        <br>
-                        import os <br>
-                        <br>
-                        # get current working directory <br>
-                        cwd = os.getcwd() <br>
-                        <br>
-                        # user picks a folder in the current working directory <br>
-                        folder = input("Enter the folder you want to compress: ") <br>
-                        <br>
-                        # change dir to inside that folder <br>
-                        pwd = os.path.join(cwd, folder) <br>
-                        os.chdir(pwd) <br>
-                        <br>
-                        # your actual imageMagick command <br>
-                        os.system("magick *.jpg -strip -interlace Plane  -quality 50% -set filename:base \"%[basename]\" \"%[filename:base]_label.jpg\"") <br>
+                        //example how to set up a imageMagick command in python
+                        <div class="gifs">
+                            <div class="cell_absolute">
+                                <img src="./imageMagick/carbon_python_code.png" alt="">
+                                
+                            </div>
+                        </div>
     
                         <br><br>
      
