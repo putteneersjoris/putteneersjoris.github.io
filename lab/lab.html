@@ -403,10 +403,17 @@ img {max-width:100%;}
                         //canny edge detection <br>
                         $ magick convert *.png -sharpen 0x15 -canny 0x1+10%+30% output_canny_edges.jpg <br>
                         * sharpening is optional but useful <br>
+                        <br> <br>
+                        //fmpeg <br>
+                        //ffmpeg extract 5 fps from video as image sequence <br>
+                        $ ffmpeg -i "input.mp4" -vf fps=3/1 "out-%05d.jpg"<br>
                         <br>
+                        //ffmpeg adjust resolution of footage with a good preset codac<br>
+                        ffmpeg -i ivideo_footage.mp4 -vf scale=1080:-1 -preset slow -crf 18 lower_resolution_video.mp4<br>
                         <br>
+                        //example how to set up a imageMagick command in python<br>
                         <br>
-                        //example how to set up a imageMagick command in python
+                        
                         <div class="gifs">
                             <div class="cell_absolute">
                                 <img src="./imageMagick/carbon_python_code.png" alt="">
