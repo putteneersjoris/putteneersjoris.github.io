@@ -53,6 +53,17 @@
 .code{
     background-color: rgb(27, 27, 27);
     border-radius: 15px;
+	
+}
+.options{
+    background-color: rgb(48, 48, 48);
+    border-radius: 5px;
+	display: inline;
+}
+.links{
+	color: white;
+	text-decoration: underline;
+	font-weight: bold;
 }
 </style>
 </head>
@@ -95,9 +106,9 @@ good resources for downloading (cc0) videos are: <br>
 
  <br><br>
 
- 
+ <h2>1) installation and setup</h2>
 the workflow is as follows: <br>
-1) installation and setup <br>
+ <br>
 &emsp; • if you are on windows, use a UNIX terminal like git bash or cygwin. <br>
 &emsp; &emsp; &emsp;        https://git-scm.com/downloads <br>
 &emsp;    • download and install python (add python to PATH) <br>
@@ -108,27 +119,45 @@ the workflow is as follows: <br>
 &emsp; &emsp; &emsp;       https://ffglitch.org/download/ <br>
  &emsp; &emsp; &emsp;    <div id="underline">  add -> "C:\Users\bivor\Downloads\ffglitch-0.9.4-win64\ffglitch-0.9.4-win64" to the environment variables. </div><br> <br>
 
- 2) locate the downloaded videos in a terminal and run the first script. This script will convert all videos to mpeg-2 files. <br><br>
+ <h2>2) Preparing videos</h2>
+ Locate the downloaded videos in a terminal and run the first script. This script will convert all videos to mpeg-2 files. 
+ Tghe videos are converted to MPEG codecs is that they allow us to easily split and concatenate  video files, without needing specialized video editing software.
+ <br>
+The codecs are robust enough so that you can cut the video files  wherever you want and the decoder will be able to recover most of it. <br><br>
  <div class="code">   
     <br>
 &emsp; $ mkdir mpeg2 <br>
 &emsp; $ for I in *.mp4; <br>
 &emsp; &ensp; &nbsp;do <br>
 &emsp; &emsp;    ffgac -i "$I" \ <br>
-&emsp; &emsp; &emsp;             -an -vcodec mpeg2video -f rawvideo \ <br>
+&emsp; &emsp; &emsp;            -an -vcodec mpeg2video \ <br>
+&emsp; &emsp; &emsp;     		-f rawvideo \ <br>
 &emsp; &emsp; &emsp;            -mpv_flags +nopimb \ <br>
-&emsp; &emsp; &emsp;             -qscale:v 6 \ <br>
-&emsp; &emsp; &emsp;             -r 30 \ <br>
+&emsp; &emsp; &emsp;            -qscale:v 6 \ <br>
+&emsp; &emsp; &emsp;            -r 30 \ <br>
 &emsp; &emsp; &emsp;            -g 90 \ <br>
-&emsp; &emsp; &emsp;             -s 2590x1110 \ <br>
+&emsp; &emsp; &emsp;            -s 2590x1110 \ <br>
 &emsp; &emsp; &emsp;            -y mpeg2/"${I/.mp4/.mpg}"; <br>
 &emsp; &emsp;   done <br><br>
 </div>
 
+<br><br> An explanation of the ffgac options: <br>
+<div class="options">-an</div> disable audio since we only care about video for now. <br>
+<div class="options">-vcodec mpeg2video</div>  use MPEG-2 as output codec<br>
+<div class="options">-f rawvideo</div>  output file as raw MPEG transport stream.<br>
+<div class="options">-mpv_flags +nopimb</div>  this option is ffgac-specific, it will make ffgac not use intra macroblocks for predictive frames.<br>
+<div class="options">-qscale:v 6</div> quality factor: the greater the number, the lower the quality.<br>
+<div class="options">-r 30</div> set frame rate to 30 frames per second. <br>
+<div class="options">-g 90</div> output an I frame at every 90 frames (3 seconds) <br>
+<div class="options">-s 2590x1110</div> set output size to 2590x1110 pixels. <br>
 <br><br>
 
-3) Now we  end up with a bunch of MPEG-2 videos in the mpeg2 directory. 
-Change into that directory and split the files into individual frames. <br><br>
+<h2>3) Splitting the videos</h2>
+<br>
+we will use ffgac to split the video in individual frames. Each file in the frames directory will contain one frame of an input video file. These may be I frames or P frames. <br>
+The counter starts at 10 so that all video files are prefixed with 2 digits.
+<br><br>
+Change into the mpeg2 directory<br><br>
 <div class="code"> 
     <br>
 
@@ -147,18 +176,28 @@ Change into that directory and split the files into individual frames. <br><br>
 
 
 
+<h2>4) concatenate the videos and split into frames</h2>
+<br>
+Now we will randomly concatenate the frames to create our the datamoshed effect.
+<br>
 
+We seperate the videos into individiual frames. Each frame file contains only one frame. So we have to be creative in choosing which files we will use to concatenate to create the datamoshed video.
 
-4) Change into the frames directory and see that you will have hundreds or possibly thousands of frames. <br><br>
+Change into the frames directory and see that you will have hundreds or possibly thousands of frames. <br><br>
+
 <div class="code"> 
     <br>
     &emsp; $ cd frames <br>
     &emsp; $ cat datamosh_11_0001.raw $(ls | xargs -n 20 | sort --random-sort) > datamosh_concatenated.mp4 <br>
     <br>
 </div>
+<br>
+This command will randomly sort the chunked frames, 60 frames at a time, and concatenate them all into one  video file at datamosh_concatenated.mp4 (you can repeat this command many times to get different random combinations of concatenated configurations).
+<br>
+Because we are using MPEG-2, The file is not corrupted.
 
 <br><br>
-5) make a new directory and extract 5 still frames each second with ffmpeg. <br><br>
+Make a new directory and extract 5 still frames each second with ffmpeg. <br><br>
 <div class="code">
 <br>
 &emsp; $ mkdir concat_frames
@@ -169,7 +208,9 @@ Change into that directory and split the files into individual frames. <br><br>
 <br><br>
 
 
-6) postprocess the newly created still frames with shapening, dithering, and annotations. Make sure to FILL IN YOUR OWN NAME. <br><br>
+<h2>5) Postprocess the frames </h2> 
+
+Postprocess the frames with shapening, Floyd steinberg dithering, and annotations. <br><br>
 <div class="code">
     <br> 
 &emsp; $ cd concat_frames <br>
@@ -184,7 +225,9 @@ Change into that directory and split the files into individual frames. <br><br>
 
 <br><br>
 
-7) upload your 5 best images to this google drive: https://drive.google.com/drive/folders/1qLtMYDghYzFvbV0-3UHsqX3OBiYYdm2i
+<h2>6) upload the frames</h2>
+<br>
+7) upload your 5 best images to this <a class="links" href="https://drive.google.com/drive/folders/1qLtMYDghYzFvbV0-3UHsqX3OBiYYdm2i">google drive</a> .
 
 <br><br>
 
