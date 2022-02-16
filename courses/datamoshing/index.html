@@ -1,0 +1,197 @@
+
+<!-- <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"> -->
+<html lang="en">
+<head>
+    
+    <link rel="icon" type="image/png" href="../icon.png" sizes="32x32">
+<title>putteneersjoris.xyz</title>
+
+<style>
+	
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500&display=swap');
+:root{
+    
+	/* --headingfont:'Quicksand', sans-serif; */
+    
+    --headingfont: 'JetBrains Mono', monospace;
+	/* --font: 'PT Sans', sans-serif; */
+	--font:'JetBrains Mono', monospace;
+}
+#ascii_art {
+	font-size: 3em;
+	font-family: monospace;
+	white-space: pre;	
+	color: white;
+	line-height: 0.9em;
+}
+
+
+.title{
+	position: absolute;
+	color: white;
+	font-size: 2em;
+	font-family: var(--font);
+
+}
+.sub-title{
+	position: absolute;
+	color: white;
+	font-size: 1em;
+	font-family: var(--font);
+	font-weight: 800;
+}
+.sub-sub-title{
+	position: absolute;
+	color: white;
+	font-size: 13px;
+	font-family: var(--font);
+}
+#underline{
+    text-decoration: underline;
+    
+}
+.code{
+    background-color: rgb(27, 27, 27);
+    border-radius: 15px;
+}
+</style>
+</head>
+<body style="background-color: black;">
+<div style="left: 50px; top: 150px; margin: 50px;">
+<h1 style="color: white; font-family: var(--font); font-weight: 800;">
+    Negotiating creativity through datamoshing
+</h1>
+<br><br><br><br>
+<div style="color: white; font-family: var(--font); ">
+
+<h2>brief</h2><br>
+
+Chose up to eight cc0 videos dipicting a "creative" dichotomy. <br>
+
+examples include:
+<br> <br>
+
+virtual <-> physical <br>
+rural <-> urban <br>
+centralized <-> decentralized <br>
+manual <-> automated <br>
+hard(ware) <-> soft(ware) <br>
+...
+
+<br> <br>
+<img src="./data/header.jpg" width="100%" alt=""> <br>
+<br><br>
+Through the moshing of these videos we will try to capture their moment of consensus/negotiation. <br>
+
+
+This workshop uses exclusively opensource command line programs(imagemagick, ffmpeg, ffglitch) and basic UNIX commands. <br>
+If the students are on Windows, a Unix shell such as Cygwin is required. <br> <br>
+
+good resources for downloading (cc0) videos are: <br> 
+    • https: https://www.pexels.com/search/videos/videos/ <br>
+    • youtube-dl: https://youtube-dl.org/ <br>
+    • google earth studio: https://www.google.com/earth/studio/ <br> <br>
+
+
+ <br><br>
+
+ 
+the workflow is as follows: <br>
+1) installation and setup <br>
+&emsp; • if you are on windows, use a UNIX terminal like git bash or cygwin. <br>
+&emsp; &emsp; &emsp;        https://git-scm.com/downloads <br>
+&emsp;    • download and install python (add python to PATH) <br>
+&emsp; &emsp; &emsp;        https://www.python.org/downloads/ <br>
+&emsp;    • download and install imagemagick (check install ffmpeg) <br>
+&emsp; &emsp; &emsp;        https://imagemagick.org <br>
+&emsp;    • download and install ffglitch (add ffglitch to PATH) <br>
+&emsp; &emsp; &emsp;       https://ffglitch.org/download/ <br>
+ &emsp; &emsp; &emsp;    <div id="underline">  add -> "C:\Users\bivor\Downloads\ffglitch-0.9.4-win64\ffglitch-0.9.4-win64" to the environment variables. </div><br> <br>
+
+ 2) locate the downloaded videos in a terminal and run the first script. This script will convert all videos to mpeg-2 files. <br><br>
+ <div class="code">   
+    <br>
+&emsp; $ mkdir mpeg2 <br>
+&emsp; $ for I in *.mp4; <br>
+&emsp; &ensp; &nbsp;do <br>
+&emsp; &emsp;    ffgac -i "$I" \ <br>
+&emsp; &emsp; &emsp;             -an -vcodec mpeg2video -f rawvideo \ <br>
+&emsp; &emsp; &emsp;            -mpv_flags +nopimb \ <br>
+&emsp; &emsp; &emsp;             -qscale:v 6 \ <br>
+&emsp; &emsp; &emsp;             -r 30 \ <br>
+&emsp; &emsp; &emsp;            -g 90 \ <br>
+&emsp; &emsp; &emsp;             -s 2590x1110 \ <br>
+&emsp; &emsp; &emsp;            -y mpeg2/"${I/.mp4/.mpg}"; <br>
+&emsp; &emsp;   done <br><br>
+</div>
+
+<br><br>
+
+3) Now we  end up with a bunch of MPEG-2 videos in the mpeg2 directory. 
+Change into that directory and split the files into individual frames. <br><br>
+<div class="code"> 
+    <br>
+
+&emsp; $ cd mpeg2 <br>
+&emsp; $ mkdir frames <br>
+&emsp; $ let x=10 <br>
+&emsp; $ for I in *.mpg; <br>
+&emsp; &emsp; do <br>
+&emsp; &emsp; ffgac -i "$I" -vcodec copy frames/datamosh_${x}_%04d.raw; <br>
+&emsp; &emsp; let x=x+1; <br>
+&emsp; done <br>
+<br>
+</div>
+
+<br><br>
+
+
+
+
+
+4) Change into the frames directory and see that you will have hundreds or possibly thousands of frames. <br><br>
+<div class="code"> 
+    <br>
+    &emsp; $ cd frames <br>
+    &emsp; $ cat datamosh_11_0001.raw $(ls | xargs -n 20 | sort --random-sort) > datamosh_concatenated.mp4 <br>
+    <br>
+</div>
+
+<br><br>
+5) make a new directory and extract 5 still frames each second with ffmpeg. <br><br>
+<div class="code">
+<br>
+&emsp; $ mkdir concat_frames
+&emsp; $ ffmpeg -i "datamosh_concatenated.mp4" -vf fps=3/1 "concat_frames/out-%05d.jpg"
+<br><br>
+</div>
+
+<br><br>
+
+
+6) postprocess the newly created still frames with shapening, dithering, and annotations. Make sure to FILL IN YOUR OWN NAME. <br><br>
+<div class="code">
+    <br> 
+&emsp; $ cd concat_frames <br>
+&emsp; $ magick convert *.jpg -sharpen 0x1.1  -ordered-dither o8x8,6 \ <br>
+&emsp; -fill white -pointsize 50 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +15+15 'Joris Putteneers' \ <br>
+&emsp; -fill white -pointsize 20 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +21+85 '%f' \ <br>
+&emsp; -fill white -pointsize 20 -undercolor black -bordercolor black -border 5x5 -gravity SouthWest -annotate +21+23 'negotiating creativity through datamoshing' \ <br>
+&emsp; -set -comment "%m:%f %wx%h" \ <br>
+&emsp; -set filename:base "%[basename]" "%[filename:base]_dithered.jpg" <br>
+<br>
+</div>
+
+<br><br>
+
+7) upload your 5 best images to this google drive: https://drive.google.com/drive/folders/1qLtMYDghYzFvbV0-3UHsqX3OBiYYdm2i
+
+<br><br>
+
+
+
+
+
+</body>
+</html>
+
