@@ -53,6 +53,9 @@
 .code{
     background-color: rgb(27, 27, 27);
     border-radius: 15px;
+	padding: 5px;
+	white-space: pre;	
+	color: white;
 	
 }
 .options{
@@ -130,20 +133,19 @@ the workflow is as follows: <br>
  <br>
 The codecs are robust enough so that you can cut the video files  wherever you want and the decoder will be able to recover most of it. <br><br>
  <div class="code">   
-    <br>
-&emsp; $ mkdir mpeg2 <br>
-&emsp; $ for I in *.mp4; <br>
-&emsp; &ensp; &nbsp;do <br>
-&emsp; &emsp;    ffgac -i "$I" \ <br>
-&emsp; &emsp; &emsp;            -an -vcodec mpeg2video \ <br>
-&emsp; &emsp; &emsp;     		-f rawvideo \ <br>
-&emsp; &emsp; &emsp;            -mpv_flags +nopimb \ <br>
-&emsp; &emsp; &emsp;            -qscale:v 6 \ <br>
-&emsp; &emsp; &emsp;            -r 30 \ <br>
-&emsp; &emsp; &emsp;            -g 90 \ <br>
-&emsp; &emsp; &emsp;            -s 2590x1110 \ <br>
-&emsp; &emsp; &emsp;            -y mpeg2/"${I/.mp4/.mpg}"; <br>
-&emsp; &emsp;   done <br><br>
+&emsp; $ mkdir mpeg2 
+&emsp; $ for I in *.mp4;
+          do
+            ffgac -i "$I" \
+                     -an -vcodec mpeg2video -f rawvideo \
+                     -mpv_flags +nopimb \
+                     -qscale:v 6 \
+                     -r 30 \
+                     -g 90 \
+                     -s 2590x1110 \
+                     -y mpeg2/"${I/.mp4/.mpg}";
+          done
+		  
 </div>
 
 <br><br> An explanation of the ffgac options: <br>
@@ -164,17 +166,15 @@ The counter starts at 10 so that all video files are prefixed with 2 digits.
 <br><br>
 Change into the mpeg2 directory<br><br>
 <div class="code"> 
-    <br>
+&emsp; $ cd mpeg2 
+&emsp; $ mkdir frames
+&emsp; $ let x=10 
+&emsp; $ for I in *.mpg;
+          do
+            ffgac -i "$I" -vcodec copy frames/datamosh_${x}_%04d.raw;
+            let x=x+1;
+          done
 
-&emsp; $ cd mpeg2 <br>
-&emsp; $ mkdir frames <br>
-&emsp; $ let x=10 <br>
-&emsp; $ for I in *.mpg; <br>
-&emsp; &emsp; do <br>
-&emsp; &emsp; ffgac -i "$I" -vcodec copy frames/datamosh_${x}_%04d.raw; <br>
-&emsp; &emsp; let x=x+1; <br>
-&emsp; done <br>
-<br>
 </div>
 
 <br><br>
@@ -191,10 +191,9 @@ We seperate the videos into individiual frames. Each frame file contains only on
 Change into the frames directory and see that you will have hundreds or possibly thousands of frames. <br><br>
 
 <div class="code"> 
-    <br>
-    &emsp; $ cd frames <br>
-    &emsp; $ cat datamosh_11_0001.raw $(ls | xargs -n 20 | sort --random-sort) > datamosh_concatenated.mp4 <br>
-    <br>
+&emsp; $ cd frames
+&emsp; $ cat datamosh_11_0001.raw $(ls | xargs -n 20 | sort --random-sort) > datamosh_concatenated.mp4
+
 </div>
 <br>
 This command will randomly sort the chunked frames, 60 frames at a time, and concatenate them all into one  video file at datamosh_concatenated.mp4 (you can repeat this command many times to get different random combinations of concatenated configurations).
@@ -204,10 +203,9 @@ Because we are using MPEG-2, The file is not corrupted.
 <br><br>
 Make a new directory and extract 5 still frames each second with ffmpeg. <br><br>
 <div class="code">
-<br>
 &emsp; $ mkdir concat_frames
 &emsp; $ ffmpeg -i "datamosh_concatenated.mp4" -vf fps=3/1 "concat_frames/out-%05d.jpg"
-<br><br>
+
 </div>
 
 <br><br>
@@ -217,15 +215,14 @@ Make a new directory and extract 5 still frames each second with ffmpeg. <br><br
 
 Postprocess the frames with shapening, Floyd steinberg dithering, and annotations. <br><br>
 <div class="code">
-    <br> 
-&emsp; $ cd concat_frames <br>
-&emsp; $ magick convert *.jpg -sharpen 0x1.1  -ordered-dither o8x8,6 \ <br>
-&emsp; -fill white -pointsize 50 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +15+15 'Joris Putteneers' \ <br>
-&emsp; -fill white -pointsize 20 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +21+85 '%f' \ <br>
-&emsp; -fill white -pointsize 20 -undercolor black -bordercolor black -border 5x5 -gravity SouthWest -annotate +21+23 'negotiating creativity through datamoshing' \ <br>
-&emsp; -set -comment "%m:%f %wx%h" \ <br>
-&emsp; -set filename:base "%[basename]" "%[filename:base]_dithered.jpg" <br>
-<br>
+&emsp; $ cd concat_frames
+&emsp; $ magick convert *.jpg -sharpen 0x1.1  -ordered-dither o8x8,6 \
+            -fill white -pointsize 50 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +15+15 'Joris Putteneers' \
+            -fill white -pointsize 20 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +21+85 '%f' \
+            -fill white -pointsize 20 -undercolor black -bordercolor black -border 5x5 -gravity SouthWest -annotate +21+23 'negotiating creativity through datamoshing' \
+            -set -comment "%m:%f %wx%h" \
+            -set filename:base "%[basename]" "%[filename:base]_dithered.jpg"
+
 </div>
 
 <br><br>
