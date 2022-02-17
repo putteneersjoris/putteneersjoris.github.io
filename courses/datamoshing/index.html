@@ -218,7 +218,7 @@ Postprocess the frames with shapening, Floyd steinberg dithering, and annotation
 <div class="code">
 &emsp; $ cd concat_frames
 &emsp; $ magick convert *.jpg -sharpen 0x1.1  -ordered-dither o8x8,6 \
-            -fill white -pointsize 50 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +15+15 'Joris Putteneers' \
+            -fill white -pointsize 50 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +15+15 'Your Name' \
             -fill white -pointsize 20 -undercolor black -bordercolor black -border 5x5 -gravity NorthWest -annotate +21+85 '%f' \
             -fill white -pointsize 20 -undercolor black -bordercolor black -border 5x5 -gravity SouthWest -annotate +21+23 'negotiating creativity through datamoshing' \
             -set -comment "%m:%f %wx%h" \
